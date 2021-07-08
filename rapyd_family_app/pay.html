@@ -1,0 +1,2820 @@
+﻿
+
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdatafa');
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<script>
+
+
+$(document).ready(function(){
+		$.get('settings_url_frontend.html', function(data) {
+   // alert(data);
+   var publicURLfa =data;
+localStorage.setItem('p_urlfa', publicURLfa);
+});
+
+//var url_xcc1= localStorage.getItem('p_url');
+
+});
+
+
+
+
+
+$(document).ready(function(){
+
+
+var userid_sess_data = localStorage.getItem('useridsessdatafa');
+var fullname_sess_data = localStorage.getItem('fullnamesessdatafa');
+var username_sess_data = userid_sess_data;
+var email_sess_data = localStorage.getItem('emailsessdatafa');
+var photo_sess_data = localStorage.getItem('photosessdatafa');
+var user_rank_sess_data = localStorage.getItem('userranksessdatafa');
+
+
+
+var rec = "<span>" +
+"<img src='"+url_xcc1+"uploads/" + photo_sess_data +"'  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#0088cc;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #8B008B;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#8B008B;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+.category_post1{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: -999;
+}
+.category_post1:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+ <section id="content" class="ac-content">
+
+
+<style>
+
+.notify_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: green; padding: 2px 6px;font-size:14px; }
+.notify_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+</style>
+
+
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+
+
+ <li class="navgate_no"><a title='Back to Dashboard' href="dashboard.html" style="color:white;font-size:14px;"><button class="category_post1">Back to Dashboard</button></a>
+ 
+
+
+
+
+
+
+<li class="navgate">
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+  <span class='myd_photo_sess'></span>
+
+More<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<b style='color:black;'>(<span class='myd_fullname_sess'></span>)</b><br><br>
+<li><a title='Logout' href="logout.html"><span style='font-size:30px;color:#8B008B;' class='fa fa-sign-out'></span> Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+
+      </ul>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+
+.senddata1_css{
+background:#8B008B;
+color:white;
+cursor:pointer;
+border:none;
+padding:2px;
+border-radius:20%;
+text-align:center
+
+}
+
+
+.senddata1_css:hover{
+background:orange;color:white;
+
+}
+
+.chat_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #34BB0C; padding: 2px 6px;font-size:14px; }
+.chat_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+
+</style>
+
+
+
+<!--load A ends here-->
+
+
+<br><br>
+
+
+
+
+
+
+
+<!--start right column all-->
+    <div class="right-column-all_NO>
+
+
+
+
+<style>
+.post_padding{
+padding-top:-70px;
+   
+}
+
+.post_bgcolor{
+background: #dddddd;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+  .post_padding{
+  padding-top:1px; 
+ margin-top:-170px
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post_padding{
+ padding-top:1px;
+ margin-top:-170px
+  }
+}
+
+
+.postbtn_dashedline{
+  border-bottom: 2px dashed #ec5574;
+
+}
+
+
+
+/* restrict responsive image to max size of 400px */
+.responsive_image1 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.responsive_image2{
+  width: 100%;
+  height: auto;
+}
+
+.responsive_video {
+  width: 100%;
+height: 400px;
+  max-width: 500px;
+  max-height: 600px;
+  //height: auto;
+}
+
+
+</style>
+<!-- all post Section start -->
+<div  class="post_padding section_padding post_bgcolor">
+
+
+<!--start blog post row-->
+ <div class="row">
+
+
+
+<style>
+.c_counter {
+ padding:10px;
+color:white;
+background:purple;
+border:none;
+cursor:pointer;
+}
+
+.c_counter:hover {
+color:white;
+background:black;
+}
+
+.social_all{
+ padding:6px;
+color:white;
+background:red;
+border:none;
+cursor:pointer;
+border-radius:15%;
+
+}
+
+.s_icon {
+color:white;
+//background:black;
+font-size:20px;
+//border-radius:50%;
+cursor:pointer;
+}
+
+
+.s_icon:hover {
+color:white;
+background:red;
+}
+
+
+</style>
+
+
+
+
+
+</div>
+<!--end blog post row-->
+
+
+<!--start form post row-->
+<div class="row">
+<br>
+<marquee><b style='font-family:comic sans ms;color:#800000;font-size:16px;'>(Your Fullname: <span class='myd_fullname_sess'></span>)</b></marquee>
+
+
+<!--post start-->
+<div class="blog_post_form col-sm-12 alerts alert-warning hide_this_form_on_submit_post" id="blog_tab1">
+
+<!--form 1 starts-->
+<div style="text-align:left;font-size:14px;font-family:verdana;color:black">
+
+
+<style>
+.map_css{
+background: #8B008B;
+color:white;
+padding:4px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+}
+
+.map_css:hover{
+background: black;
+color:white;
+
+}
+
+
+.map_css1{
+background: #ec5574;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+
+}
+
+
+.map_css1:hover{
+background: #800000;
+color:white;
+
+}
+
+
+
+
+
+.title_css{
+//background: green;
+color:#0088cc;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: #c1c1c1;
+color:black
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: #c1c1c1;
+color:black;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_cssa{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_cssa:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+      
+</div>
+<!--form 1 ends-->
+
+
+</div>
+
+<!--post end-->
+
+
+</div>
+<!--end form post row-->
+
+
+
+
+
+
+
+
+
+<!-- Main Post Database query starts here -->
+
+
+
+
+
+<!-- Main Post start -->
+
+
+
+
+<script>
+
+$(document).ready(function(){
+
+var creator9x_id = localStorage.getItem('useridsessdatafa');
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+$("#loader-creator9x_id").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait, checking if Senders/Payers Banking Details has been Updated...</div>');
+var datasend = {creator9x_id, creator9x_id};
+
+	
+		$.ajax({
+			
+			type:'POST',			
+                        url: url_xcc1+'bankinfo_check.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader-creator9x_id").hide();
+$("#result-creator9x_id").html(msg);
+//setTimeout(function(){ $('#result-creator9x_id').html(''); }, 5000);				
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+</script>
+
+
+<div id="loader-creator9x_id"></div>
+<div id="result-creator9x_id"></div>
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+
+//alert(url_post_data);
+var url_content1 = window.location.href;
+var url_p1 = new URL(url_content1);
+var uid = url_p1.searchParams.get("id");
+var token = url_p1.searchParams.get("token");
+var fullname = url_p1.searchParams.get("fullname");
+var sal_amount = url_p1.searchParams.get("sal");
+
+$('.amount1c').val(sal_amount).value;
+$('.fullname_call').html(fullname);
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+
+$("#loader-dashboard_post").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i> &nbsp;Please Wait,Loading Contents...</div>');
+var datasend = {uid:uid, token:token};
+
+//alert(r_id1);
+//url:url_post_data+'employee_info.php',
+	
+		$.ajax({
+			
+			type:'POST',			
+                        url: url_xcc1+'recipient_info.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$("#loader-dashboard_post").hide();
+$("#result-dashboard_post").html(msg);
+//setTimeout(function(){ $('#result-dashboard_post').html(''); }, 5000);				
+	
+}
+			
+		});
+		
+		
+
+});
+
+
+</script>
+
+
+<div style="font-size:30px;color:#800000" >
+<center>Families & Friends Payments System
+</div><br>
+
+
+
+<div style='font-size:20px'>Welcome to <span style='color:purple;' class='fullname_call'></span>'s Payments Tracking Profile</div><br>
+
+
+<div id="loader-dashboard_post"></div>
+<div id="result-dashboard_post"></div>
+
+
+<script>
+//url: url_forming+'ewallets_load.php',
+//start 1
+$(document).ready(function(){
+$('#loader_pro1').fadeIn(400).html('<br><div class="loader_css" ><i class="fa fa-spinner fa-spin" style="font-size:20px"></i>  &nbsp;Please Wait, wallets is being Loaded...</div>');
+ $('#loader_pro2').fadeIn(400).html('<br><div class="loader_css" ><i class="fa fa-spinner fa-spin" style="font-size:20px"></i>  &nbsp;Please Wait, wallets is being Loaded...</div>');
+                 
+var creator_id = localStorage.getItem('useridsessdatafa');
+var url_content1_n = window.location.href;
+var url_p1_n = new URL(url_content1_n);
+var n_uid = url_p1_n.searchParams.get("id");
+var n_token = url_p1_n.searchParams.get("token");
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+
+//alert(n_uid);
+//alert(n_token);
+
+			$.ajax({
+				url: url_xcc1+'ewallets_load.php',
+				type: 'post',
+				data: {creator_id: creator_id, n_uid:n_uid, n_token:n_token},
+				dataType: 'json',
+				success: function(response){
+					
+					var len = response.length;
+					
+//alert(response[0].employee_wallet_id);
+var employees_wallet_id = response[0].employee_wallet_id;
+$('.employees_wallet_id_single').html(employees_wallet_id);
+$('.employees_wallet_id_single1').val(employees_wallet_id).value;
+//startif
+if(len == 0){
+$("#wallet_select_empty").html("<div style='background:red;color:white;padding:10px;'>You dont have any Payment Wallets on this Platform. Please Create and Fund Your Wallets First from Dashboard</div>");
+$("#wallet_select_empty2").html("<div style='background:red;color:white;padding:10px;'>You dont have any Payment Wallets on this Platform. Please Create and Fund Your Wallets First from Dashboard</div>");
+
+
+$('#loader_pro1').hide();
+$('#loader_pro2').hide();
+}else{
+
+		            for( var i = 0; i<len; i++){
+		                var id = response[i]['id'];
+		                var wallet_id = response[i]['wallet_id'];
+		                    
+		                $("#wallet_select").append("<option name='w_id' class='w_id' value='"+wallet_id+"'>"+wallet_id+"</option>");
+						$("#wallet_select2").append("<option name='w_id2' class='w_id2' value='"+wallet_id+"'>"+wallet_id+"</option>");
+						
+						
+                                $('#loader_pro1').hide();
+								 $('#loader_pro2').hide();
+								
+//$('#wallet_select3').val(wallet_id).value;
+		            }
+
+}
+//end if
+
+
+
+				}
+			});
+			
+		});
+//end 1
+
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+$('#loader_emp1').fadeIn(400).html('<br><div class="loader_css" ><i class="fa fa-spinner fa-spin" style="font-size:20px"></i>  &nbsp;Please Wait, Payer/Sender Banking Info is being Loaded...</div>');
+var creator_id = localStorage.getItem('useridsessdatafa');
+//alert(url_post_data);
+var url_content1_e = window.location.href;
+var url_p1_e = new URL(url_content1_e);
+var e_uid = url_p1_e.searchParams.get("id");
+var e_token = url_p1_e.searchParams.get("token");
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+
+			$.ajax({
+				url: url_xcc1+'recipient_bank_load.php',
+				type: 'post',
+				data: {creator_id: creator_id, e_uid:e_uid, e_token:e_token},
+				dataType: 'json',
+				success: function(data){
+					
+					var len = data.length;
+					 // $('#loader_emp1').hide();
+					 
+					// alert(data[0].id);
+					//alert(data[0].bank_name);
+//startif
+if(len == 0){
+$("#result_employee").html("<div style='background:red;color:white;padding:10px;'>No Banking Info Found for this Recipients</div>");
+$('#loader_emp1').hide();
+
+}else{
+
+
+		            for( var i = 0; i<len; i++){
+		                var id = data[i]['id'];
+		                var wallet_id = data[i]['wallet_id'];
+		                  var salary = data[i]['salary'];  
+						  //alert(wallet_id);
+						  //alert(salary);
+var b_salary=salary;					
+var b_name = data[i]['b_name'];
+var b_address  = data[i]['b_address'];
+var b_email = data[i]['b_email'];
+var b_country = data[i]['b_country'];
+var b_city = data[i]['b_city'];
+var b_postcode = data[i]['b_postcode'];
+var b_account_number = data[i]['b_account_number'];
+var bank_name = data[i]['bank_name'];
+var b_state = data[i]['b_state'];
+var b_identification_type = data[i]['b_identification_type'];
+var b_identification_value = data[i]['b_identification_value'];
+var b_bic_swift = data[i]['b_bic_swift'];
+var b_ach_code = data[i]['b_ach_code'];
+var b_beneficiary_country = data[i]['b_beneficiary_country'];
+var b_beneficiary_entity_type = data[i]['b_beneficiary_entity_type'];
+
+
+var s_description = data[i]['s_description'];
+var s_merchant_reference_id = data[i]['s_merchant_reference_id'];
+var s_payout_currency = data[i]['s_payout_currency'];
+var s_payout_method_type = data[i]['s_payout_method_type'];
+var s_name = data[i]['s_name'];
+var s_address = data[i]['s_address'];
+var s_city = data[i]['s_city'];
+var s_state = data[i]['s_state'];
+var s_date_of_birth = data[i]['s_date_of_birth'];
+var s_postcode = data[i]['s_postcode'];
+var s_phonenumber = data[i]['s_phonenumber'];
+var s_remitter_account_type = data[i]['s_remitter_account_type'];
+var s_source_of_income = data[i]['s_source_of_income'];
+var s_identification_type = data[i]['s_identification_type'];
+var s_identification_value = data[i]['s_identification_value'];
+var s_purpose_code = data[i]['s_purpose_code'];
+var s_account_number = data[i]['s_account_number'];
+var s_beneficiary_relationship = data[i]['s_beneficiary_relationship'];
+var s_sender_country = data[i]['s_sender_country'];
+var s_sender_currency = data[i]['s_sender_currency'];
+var s_sender_entity_type = data[i]['s_sender_entity_type'];
+
+
+
+
+
+$('#wallet_id_calling').val(wallet_id).value;
+
+//alert(b_name);
+
+$('.b_salary_call1').html(salary);
+$('.b_walletid_call1').html(wallet_id);
+$('.b_name_call1').html(b_name);
+$('.b_address_call1').html(b_address);
+$('.b_email_call1').html(b_email);
+$('.b_country_call1').html(b_country);
+$('.b_city_call1').html(b_city);
+$('.b_postcode_call1').html(b_postcode);
+$('.b_account_number_call1').html(b_account_number);
+$('.bank_name_call1').html(bank_name);
+$('.b_state_call1').html(b_state);
+$('.b_identification_type_call1').html(b_identification_type);
+$('.b_identification_value_call1').html(b_identification_value);
+$('.b_bic_swift_call1').html(b_bic_swift);
+$('.b_ach_code_call1').html(b_ach_code);
+$('.b_beneficiary_country_call1').html(b_beneficiary_country);
+$('.b_beneficiary_entity_type_call1').html(b_beneficiary_entity_type);
+
+
+
+$('.s_description_call1').html(s_description);
+$('.s_merchant_reference_id_call1').html(s_merchant_reference_id);
+$('.s_payout_currency_call1').html(s_payout_currency);
+$('.s_payout_method_type_call1').html(s_payout_method_type);
+$('.s_name_call1').html(s_name);
+$('.s_address_call1').html(s_address);
+$('.s_city_call1').html(s_city);
+$('.s_state_call1').html(s_state);
+$('.s_date_of_birth_call1').html(s_date_of_birth);
+$('.s_postcode_call1').html(s_postcode);
+$('.s_phonenumber_call1').html(s_phonenumber);
+$('.s_remitter_account_type_call1').html(s_remitter_account_type);
+$('.s_source_of_income_call1').html(s_source_of_income);
+$('.s_identification_type_call1').html(s_identification_type);
+$('.s_identification_value_call1').html(s_identification_value);
+$('.s_purpose_code_call1').html(s_purpose_code);
+$('.s_account_number_call1').html(s_account_number);
+$('.s_beneficiary_relationship_call1').html(s_beneficiary_relationship);
+$('.s_sender_country_call1').html(s_sender_country);
+$('.s_sender_currency_call1').html(s_sender_currency);
+$('.s_sender_entity_type_call1').html(s_sender_entity_type);
+
+
+
+$('#loader_emp1').hide();
+								
+					
+// start Payments
+$(document).ready(function(){
+
+$('#paye_btn').click(function(){
+//alert(data[0].id);
+var s_wallet_id = $('#wallet_select').val();
+var creator_id1 = localStorage.getItem('useridsessdatafa');
+var b_date = $('#b_date').val();
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+
+var ux_amount = $('#ux_amount').val();
+var ux_reason = $('#ux_reason').val();
+
+
+if(s_wallet_id==0){
+alert('Please Select Employers Wallets ID');
+}
+
+else if(b_date==''){
+alert('Please Select Salary Payment Date and Month');
+}
+
+
+else if(ux_amount==""){
+alert('Amount to Send Cannot be empty');
+}
+
+else if(isNaN(ux_amount)){
+  alert("Amount to Send must be a number");
+}
+
+
+else if(ux_amount > 1000){
+alert('For Testing Purpose, Amount to Send should not be more than 1,000(USD). Please enter lesser amount');
+}
+
+
+else if(ux_reason==""){
+alert('Reason for Sending Money Cannot be empty');
+}
+
+
+else{
+$('#loader_paye').fadeIn(400).html('<br><div class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait,  payment is being sent to Recipients Bank Account</div><br>');
+
+
+var datasend = {
+s_description:s_description,
+s_merchant_reference_id:s_merchant_reference_id,
+s_payout_currency:s_payout_currency,
+s_payout_method_type:s_payout_method_type,
+s_name:s_name,
+s_address:s_address,
+s_city:s_city,
+s_state:s_state,
+s_date_of_birth:s_date_of_birth,
+s_postcode:s_postcode,
+s_phonenumber:s_phonenumber,
+s_remitter_account_type:s_remitter_account_type,
+s_source_of_income:s_source_of_income,
+s_identification_type:s_identification_type,
+s_identification_value:s_identification_value,
+s_purpose_code:s_purpose_code,
+s_account_number:s_account_number,
+s_beneficiary_relationship:s_beneficiary_relationship,
+s_sender_country:s_sender_country,
+s_sender_currency:s_sender_currency,
+s_sender_entity_type:s_sender_entity_type,
+creator_id1:creator_id1,
+s_wallet_id:s_wallet_id,
+b_name:b_name,
+b_address:b_address,
+b_email:b_email,
+b_country:b_country,
+b_city:b_city,
+b_postcode:b_postcode,
+b_account_number:b_account_number,
+bank_name:bank_name,
+b_state:b_state,
+b_identification_type:b_identification_type,
+b_identification_value:b_identification_value,		
+b_bic_swift:b_bic_swift,
+b_ach_code:b_ach_code,
+b_beneficiary_country:b_beneficiary_country,
+b_beneficiary_entity_type:b_beneficiary_entity_type,
+b_salary:b_salary,
+e_token:e_token,
+e_uid:e_uid,
+b_date:b_date,
+ux_amount:ux_amount,
+ux_reason:ux_reason
+};
+		
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'payout_bank_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+$('#loader_paye').hide();
+$('#result_paye').html(msg);
+//setTimeout(function(){ $('#result_paye').html(''); }, 5000);				
+					
+			}
+			
+		});
+		
+		}
+
+
+})
+
+});
+
+// ends payments
+
+
+
+
+					
+		            }
+					
+					
+
+}
+//end if
+
+
+				}
+			
+				
+			});
+			
+		});
+//end 1
+
+</script>
+
+
+<br>			
+ <button data-toggle='modal' data-target='#myModal_p2'  title='Send Payments Via Rapyd Disburse' class='col-sm-6 disburse_css'><span style='font-size:20px;color:white;' class='fa fa-money'></span> Send Payments via Disburse(Payout to Recipients Bank Account)</button>
+<button data-toggle='modal' data-target='#myModal_p3'  title='Send Payments Via Rapyd Wallets' class='col-sm-6  walleting_css'><span style='font-size:20px;color:white;' class='fa fa-money'></span> Send Payments Via Wallet to Wallets(Transfer Payments to Recipients's Wallets)</button>
+
+
+<br>
+<style>
+
+.action_css{
+background:#ec5574;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+.action_css1{
+background:#32CD32;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css1:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+
+.collect_css{
+background:#ec5574;
+color:white;
+border:none;
+padding:10px;
+border-radius:50%;
+font-size:16px;
+}
+.collect_css:hover{
+background:orange;
+color:black;
+}
+
+
+.disburse_css{
+background:purple;
+color:white;
+border:none;
+padding:10px;
+border-radius:50%;
+font-size:16px;
+}
+.disburse_css:hover{
+background:orange;
+color:black;
+}
+
+
+
+.walleting_css{
+background:#800000;
+color:white;
+border:none;
+padding:10px;
+border-radius:50%;
+font-size:16px;
+}
+.walleting_css:hover{
+background:orange;
+color:black;
+}
+
+
+.myform_btn_css{
+
+background:navy;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.myform_btn_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+.s_css{
+background:#ddd;
+color:black;
+padding:10px;
+border:none;
+cursor:pointer;
+border-style: dashed; border-width:4px; border-color: #0088cc;
+}
+
+
+.s_css:hover{
+background:orange;
+color:black;
+}
+
+
+.invite_btn1{
+background-color: navy;
+padding: 6px;
+color:white;
+font-size:24px;
+//border-radius: 50%;
+border: none;
+cursor: pointer;
+text-align: center;
+padding:20px;
+}
+.invite_btn1:hover {
+background: black;
+color:white;
+}
+
+
+
+//ccc fff ddd
+.task_css{
+background: #c1c1c1;
+color:black;
+padding:6px;
+border:none;
+}
+
+.task_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.edit_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+}
+
+.edit_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.delete_css{
+background: red;
+color:white;
+padding:6px;
+border:none;
+}
+
+.delete_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+.eng_css{
+background: blue;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.eng_css:hover{
+background: orange;
+color:black;
+
+}
+
+.op_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.op_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+
+.des_css{
+background: purple;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.des_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+.sup_css{
+background: #800000;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.sup_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+		
+		
+
+.p1_css{
+background: #FF00FF;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.p1_css:hover{
+background: orange;
+color:black;
+
+}
+
+.p2_css{
+background: #008000;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.p2_css:hover{
+background: orange;
+color:black;
+
+}
+
+</style>
+
+
+
+
+
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+<script>
+
+var url_content1x = window.location.href;
+var url_p1x = new URL(url_content1x);
+var user_id = url_p1x.searchParams.get("id");
+var owner_id = localStorage.getItem('useridsessdatafa');
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+//alert(user_id);
+        var page_row_call_sal =3;
+
+        $(document).ready(function(){
+ 
+            loadTask_sal();
+
+$("#loader_posts_sal").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+
+            $("#loadmore_btn_sal").click(function(){
+
+
+
+ // var issue = $("#issue").val();
+                var queryid_sal = Number($("#form_queryid_sal").val());
+                var querytotal_sal = Number($("#form_querytotal_sal").val());
+                queryid_sal += page_row_call_sal;
+                if(queryid_sal <= querytotal_sal){
+               
+                    $("#form_queryid_sal").val(queryid_sal);
+                    loadTask_sal();
+                }
+
+                if(queryid_sal >= querytotal_sal){
+               
+                   alert('No More Payments Data to Load');
+				  // location.reload();
+$("#nomore_content_check_sal").html("<div style='background:purple;color:white;padding:10px;'>No More  Payments Data to Load <br> <center><button style='background:#3b5998;border:none;color:white;padding:10px;cursor:pointer' title='Refresh Page' class='reloadPageTask_sal'>Refresh Page</button></center> </div>");   
+//setTimeout(function(){ $('#result_task_updates_sal').html(''); }, 5000);	
+
+$('#loader_post_sal').hide();
+                }
+
+
+
+
+
+            });
+        });
+
+        function loadTask_sal(){
+            var queryid_sal = $("#form_queryid_sal").val();
+            var querytotal_sal = $("#form_querytotal_sal").val();
+
+$("#loader_posts_sal").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+            $.ajax({
+                url: url_xcc1+'payments_load.php',
+                type:'post',
+                data:{queryid_sal:queryid_sal,page_row_call_sal:page_row_call_sal, owner_id:owner_id, user_id:user_id},
+                dataType:'json',
+                success:function(response){
+
+if(response ==11){
+//alert('This User has not recieve any Salary Yet');
+$("#pcheck_sal").html("<div style='background:red;color:white;padding:10px;'>This user has not recieve any Salary yet</div>");   
+$("#loader_posts_sal").hide();
+return false;
+}
+
+                    loadAllContent_sal(response);
+
+$("#loader_posts_sal").hide();
+                }
+            });
+
+
+
+
+        }
+
+        function loadAllContent_sal(data){
+
+            var len1_sal = data.length;
+
+
+
+            for(var i=0; i<len1_sal; i++){
+                if(i == 0){
+                    var querytotal_sal = data[i]['allcount'];
+                    $("#form_querytotal_sal").val(querytotal_sal);
+
+                }else{
+
+			
+                    var id = data[i]['id'];
+					var userid = data[i]['userid'];
+					var usertoken = data[i]['usertoken'];
+					 var photo = data[i]['photo'];
+                    var fullname = data[i]['fullname'];
+                    var department = data[i]['department'];
+                    var salary_amount = data[i]['salary_amount'];
+                    var salary_month = data[i]['salary_month'];
+                    var timing = data[i]['timing'];
+                    var payment_method = data[i]['payment_method'];
+      var payment_method2 = data[i]['payment_method2'];
+	        var user_ewallet_id = data[i]['user_ewallet_id'];
+			      var payout_id = data[i]['payout_id'];
+				        var payout_status = data[i]['payout_status'];
+var creator_id = data[i]['creator_id'];
+var reason = data[i]['reason'];
+
+						
+if(payout_status =='Created'){
+var pay1_css= 'p1_css';
+}	
+if(payout_status =='PEN'){
+var pay1_css= 'p1_css';
+}				
+if(payout_status =='Completed'){
+var pay1_css= 'p2_css';
+}	
+if(payout_status =='CLO'){
+var pay1_css= 'p2_css';
+}						
+						
+if(payment_method =='Disburse'){
+var pay_css= 'eng_css';
+}
+if(payment_method =='Wallet'){
+var pay_css= 'des_css';
+}
+
+
+if(payout_status =='Created'){
+var c_pay1 = 'action_css';
+var c_pay2 = 'complete_pay_btn';
+var c_pay3  ='Complete Payments';
+}
+
+if(payout_status =='PEN'){
+var c_pay1 = 'action_css';
+var c_pay2 = 'complete_pay_btn';
+var c_pay3  ='Complete Payments';
+}
+
+
+if(payout_status =='Completed'){
+var c_pay1 = 'action_css1';
+var c_pay2 = 'complete_pay_btn_no';
+var c_pay3  ='Payout Completed';
+}
+
+
+if(payout_status =='CLO'){
+var c_pay1 = 'action_css1';
+var c_pay2 = 'complete_pay_btn_no';
+var c_pay3  ='Transfer Completed';
+}
+
+
+/*
+if(payment_method =='Transfer'){
+var pay_css= 'op_css';
+}
+
+if(department == 'Engineering'){
+var st_css= 'eng_css';
+}
+
+if(department == 'Operations'){
+var st_css= 'op_css';
+}
+
+if(department == 'Design'){
+var st_css= 'des_css';
+}
+if(department == 'Supports'){
+var st_css= 'sup_css';
+}
+*/
+
+
+var rec_sal = "<div class='rows' style='width:100%;'><div  class='col-sm-12 task_css notify-fade_" + id +"'  style='width:100%;' id='contents_data' >" +      
+"<span class='col-sm-1'><img title='Owner' alt='Image' class='img-circle' style='border-style: solid; border-width:3px; border-color:#3b5998; width:40px;height:40px; max-width:40px;max-height:40px;' src='"+url_xcc1+"uploads_image/" + photo +"' /></span>" +
+"<span class='col-sm-2' >"+fullname+"</span>" +
+"<span class='col-sm-1' >"+salary_amount+"</span>" +
+"<span class='col-sm-1' >"+reason+"</span>" +
+"<span class='col-sm-2 "+pay_css+" ' >"+payment_method+" ("+payment_method2+")</span>" +
+"<span class='col-sm-1' >"+department+"</span>" +
+"<span class='col-sm-1 "+pay1_css+"' >"+payout_status+"</span>" +
+"<span class='col-sm-1'><span class='fa fa-calendar'></span> <span data-livestamp='" + timing + "'></span></span>"+
+
+
+"<div class='loader-post1_" + id +"'></div>"+
+"<div class='result-post1_" + id +"'></div>"+
+
+"<div><button class='"+c_pay1+" btn_action_pay pull-right col-sm-2 "+c_pay2+" ' id='' data-id=\""+ id +"\" data-payout_id=\""+ payout_id +"\" data-payout_status=\""+ payout_status +"\" data-creator_id=\""+ creator_id +"\" data-salary=\""+ salary_amount +"\"  title=' "+c_pay3+" '><span style='font-size:20px;color:black;' class='fa fa-money'></span> "+c_pay3+" </button></div><br>"+
+
+
+
+//"<div><button class='action_css btn_action_pay pull-right col-sm-2 complete_pay_btn' id='' data-id=\""+ id +"\" data-payout_id=\""+ payout_id +"\"  title='Complete Payments'><span style='font-size:20px;color:black;' class='fa fa-money'></span> Complete Payments</button></div><br>"+
+
+
+"</div><br></div><br>";
+
+
+
+
+
+ $("#res_Task_sal").append(rec_sal);
+
+
+$("#loader_posts_sal").hide();
+
+                }
+            }
+        }
+
+
+
+// loading ends here
+
+
+
+
+// refresh page on click
+
+$(document).ready(function(){
+//$('.reloadPageTask_sal').click(function(){
+$(document).on( 'click', '.reloadPageTask_sal', function(){ 
+window.location.href = window.location.href;
+//location.reload();
+//window.location='pay_salary.html';
+	})
+
+
+});
+
+
+
+
+// Task updates Calls Starts
+$(document).ready(function(){
+//$('.btn_action_pay').click(function(){
+$(document).on( 'click', '.btn_action_pay', function(){ 
+
+var id = $(this).data('id');
+var payout_id = $(this).data('payout_id');
+var payout_status = $(this).data('payout_status');
+var creator_id = $(this).data('creator_id');
+var salary = $(this).data('salary');
+
+
+
+//alert(salary);
+//alert(creator_id);
+
+$('.vx_id').val(id).value;
+$('.vx_payout_id').val(payout_id).value;
+$('.vx_payout_status').val(payout_status).value;
+$('.vx_creator_id').val(creator_id).value;
+$('.vx_salary').val(salary).value;
+
+})
+});
+
+
+
+// Complete starts here starts here
+$(document).ready(function(){
+//$('.complete_pay_btn').click(function(){
+$(document).on( 'click', '.complete_pay_btn', function(){ 
+
+var id = $('.vx_id').val();
+var payout_id = $('.vx_payout_id').val();
+var payout_status = $('.vx_payout_status').val();
+var salary = $('.vx_salary').val();
+var creator_id = localStorage.getItem('useridsessdatafa');
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+
+if(payout_status =='Created'){
+ if(confirm("Are you sure you want to Complete this Payout Payments: ")){
+$(".loader-post1_"+id).fadeIn(400).html('<br><div class="pull-right" style="color:black;background:#ddd;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Payments is being Completed...</div>');
+var datasend = {'id': id,payout_id:payout_id,payout_status:payout_status,creator_id:creator_id,salary:salary};
+		// start Ajax
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'complete_payout.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+			
+	if(msg == 1){
+alert('Payout Successfully Completed');
+//$(".notify-fade_"+id).delay(1000).fadeOut('fast');
+
+$(".loader-post1_"+id).hide();
+$(".result-post1_"+id).html("<div style='color:white;background:green;padding:10px;'>Payout Successfully Completed..</div>");
+setTimeout(function(){ $(".result-post1_"+id).html(''); }, 5000);
+//location.reload();
+window.location.href = window.location.href;
+}
+
+
+	if(msg == 0){
+
+alert('Payout Could not be Completed. Please Ensure there is Internet Connections');
+$(".loader-post1_"+id).hide();
+$(".result-post1_"+id).html("<div style='color:white;background:red;padding:10px;'>Payout Could not be Completed. Please ensure you are connected to Internet.</div>");
+setTimeout(function(){ $(".result-post1_"+id).html(''); }, 5000);
+
+}
+
+}
+			
+});
+// end Ajax
+
+}
+// confirm ends
+}
+//end if
+
+
+
+
+
+
+
+
+if(payout_status =='PEN'){
+ if(confirm("Are you sure you want to Complete this Transfer Payments: ")){
+$(".loader-post1_"+id).fadeIn(400).html('<br><div class="pull-right" style="color:black;background:#ddd;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Transfer is being Completed...</div>');
+var datasend = {'id': id,payout_id:payout_id,payout_status:payout_status,creator_id:creator_id,salary:salary};
+		// start Ajax
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'complete_transfer.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+			
+	if(msg == 1){
+alert('Transfer Successfully Completed');
+//$(".notify-fade_"+id).delay(1000).fadeOut('fast');
+
+$(".loader-post1_"+id).hide();
+$(".result-post1_"+id).html("<div style='color:white;background:green;padding:10px;'>Transfer Successfully Completed..</div>");
+setTimeout(function(){ $(".result-post1_"+id).html(''); }, 5000);
+//location.reload();
+window.location.href = window.location.href;
+}
+
+
+	if(msg == 0){
+
+alert('Transfer Could not be Completed. Please Ensure there is Internet Connections');
+$(".loader-post1_"+id).hide();
+$(".result-post1_"+id).html("<div style='color:white;background:red;padding:10px;'>Transfer Could not be Completed. Please ensure you are connected to Internet.</div>");
+setTimeout(function(){ $(".result-post1_"+id).html(''); }, 5000);
+
+}
+
+}
+			
+});
+// end Ajax
+
+}
+// confirm ends
+}
+//end if
+
+
+
+                });
+
+
+            });
+
+
+// complete Payments ends here
+
+
+// Task updates Calls ends
+</script>
+
+<input type="hidden" name="vx_id" class="vx_id" value="">
+<input type="hidden" name="vx_payout_id" class="vx_payout_id" value="">
+<input type="hidden" name="vx_payout_status" class="vx_payout_status" value="">
+<input type="hidden" name="vx_salary" class="vx_salary" value="">
+
+
+
+
+
+<!-- start loading data --->
+
+<div style='width:100%;background:#ddd;color:black;font-size:18px;text-align:center;'>Salary Payments Details</div>
+   <br>
+<div id="content">
+
+ 
+
+
+
+
+<table width="100%" id="task_label" border="0">
+        <tr class="tr_header">
+            <th class='col-sm-1'>Photo</th>
+            <th class='col-sm-2'>Fullname</th>
+            <th class='col-sm-1'>Amount(USD)</th>
+            <th class='col-sm-1'>Payment<br>Reason</th>
+
+<th class='col-sm-2'>Payments Method</th>
+<th class='col-sm-1'>Families</th>
+<th class='col-sm-1'>Payment Status</th>
+            <th class='col-sm-1'>Created Time</th>
+            <th class='col-sm-2'>Actions</th>
+
+        </tr>
+    </table>
+  
+        <div id="res_Task_sal"  style='width:100%'></div>
+<div id="nomore_content_check_sal"></div>
+<div id="loader_check_sal"></div>
+<div id="result_check_sal"></div>
+
+        <div id="">
+            <input type="hidden" id="form_queryid_sal" value="0" />
+            <input type="hidden" id="form_querytotal_sal" value="0" />
+<br>
+
+<hr style='width:100%;'>
+<br>
+<div id="network_error"></div>
+<div id="pcheck_sal"></div>
+
+<div style='width:100%;' id="loader_posts_sal"></div><br>
+<input type="button" style='width:100%' title='LoadMore Payments' class="button action_css" value="LoadMore Payments Info" id="loadmore_btn_sal" />
+ 
+        </div>
+    </div>
+
+
+<!-- end loading data  --->
+
+
+
+
+
+
+
+
+
+
+<!-- Main Post ends -->
+
+
+<!-- Main Post Database query ends here-->
+
+
+
+
+
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+<p class="footer_text1"><span class='myd_title_header'></span></p>
+<p class="footer_text2"><span class='myd_title_footer'></span></p>
+<br>
+
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+  <!--end right column all-->    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.title_css{
+//background: green;
+color:green;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: purple;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: green;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_css{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+
+
+
+
+
+<style>
+
+// make modal full screen
+/*
+.full-screen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+*/
+
+.modal-dialog {
+  width: 98%;
+  height: 92%;
+  padding: 0;
+}
+
+.modal-content {
+  height: 99%;
+}
+
+</style>
+
+
+
+ <!-- Modal one Starts -->
+
+<div class="container">
+ 
+  <div class="modal fade" id="myModal_p2" role="dialog">
+   <div class="full-screen modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing" style='height:1300px;'>
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style='color:black; background:#ddd'>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Send Payments via Payout to Recipients Bank Account(Rapyd Disburse)</h4>
+        </div>
+        <div class="modal-body">
+ <!-- Modal content starts-->
+
+
+<script>
+
+$(document).ready(function(){
+
+$('#pay_collect_btn').click(function(){
+var amount1 = $('.amount1c').val();
+var currency1 = $('#currency1c').val();
+var description1 = $('#description1c').val();
+var name1 = $('#name1c').val();
+var number1 = $('#number1c').val();
+var expiration_month1 = $('#expiration_month1c').val();
+var expiration_year1 = $('#expiration_year1c').val();
+var cvv1 = $('#cvv1c').val();
+var walletid_call2_wallets = $('.walletid_call2_walletsc').val();
+
+var creator_id1 = localStorage.getItem('useridsessdatafa');
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+
+
+//alert(url_post_data);
+var url_content1c = window.location.href;
+var url_p1c = new URL(url_content1c);
+var uidc = url_p1c.searchParams.get("id");
+var tokenc = url_p1c.searchParams.get("token");
+var salary_datec = $('#salary_datec').val();
+
+
+if(walletid_call2_wallets==""){
+alert('Employee Wallets ID Cannot be Empty.');
+}
+
+else if(salary_datec==""){
+alert('Please Pick Salary Payment Date');
+}
+
+else if(creator_id1==""){
+alert('There is an issue with Admin Session ID.');
+}
+
+else if(amount1==""){
+alert('Amount Cannot be Empty.');
+}
+
+else if(isNaN(amount1)){
+  alert("Amount must be a number");
+}
+
+
+else if(currency1==""){
+alert('Currency Cannot be Empty');
+}
+
+else if(description1==""){
+alert('Payment Description Cannot be Empty');
+}
+else if(name1==""){
+alert('Name on Card Cannot be Empty');
+}
+
+else if(number1==""){
+alert('Card No Cannot be Empty');
+}
+
+else if(expiration_month1==""){
+alert('Card Expiration Date Cannot be Empty');
+}
+
+else if(expiration_year1==""){
+alert('Card Expiration Year Cannot be Empty');
+}
+
+
+else if(cvv1==""){
+alert('Card CVV Cannot be Empty');
+}
+
+
+else{
+$('#loader_wallets_collect').fadeIn(400).html('<br><div class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait, Payments is Being Processed</div><br>');
+var datasend = {walletid_call2_wallets:walletid_call2_wallets,creator_id1:creator_id1, amount1:amount1, currency1:currency1,description1:description1,name1:name1,number1:number1,expiration_month1:expiration_month1,expiration_year1:expiration_year1,cvv1:cvv1,uidc:uidc,tokenc:tokenc};
+		
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'wallets_fund_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+$('#loader_wallets_fund').hide();
+$('#result_wallets_fund').html(msg);
+//setTimeout(function(){ $('#result_wallets_fund').html(''); }, 5000);				
+					
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+
+
+        </script>
+
+
+
+
+<div style='font-size:20px;color:purple'><center>Send Payments via Rapyd Disburse (Payout to Recipients Bank Account)</center></div><br>
+
+
+
+<div class='rows'>
+
+<div class='col-sm-6'>
+
+<h3 style='color:purple'>Payers(Senders) Payout Banking Info</h3>
+
+<b>Payout Descriptions: </b> <span class="s_description_call1"></span> <br />
+<b> Merchant_reference_id:</b> <span class="s_merchant_reference_id_call1"></span> <br />
+<b>Payout_currency: </b> <span class="s_payout_currency_call1"></span> <br />
+<b>Payout_method_type: </b> <span class="s_payout_method_type_call1"></span> <br />
+<b>Name: </b> <span class="s_name_call1"></span> <br />
+<b> Address:</b> <span class="s_address_call1"></span> <br />
+<b>City: </b> <span class="s_city_call1"></span> <br />
+<b>State: </b> <span class="s_state_call1"></span> <br />
+<b>Date of Birth: </b> <span class="s_date_of_birth_call1"></span> <br />
+<b>Postcode: </b> <span class="s_postcode_call1"></span> <br />
+<b> Phonenumber:</b> <span class="s_phonenumber_call1"></span> <br />
+<b> Remitter_account_type:</b> <span class="s_remitter_account_type_call1"></span> <br />
+<b>Source_of_income: </b> <span class="s_source_of_income_call1"></span> <br />
+<b> Identification_type:</b> <span class="s_identification_type_call1"></span> <br />
+<b> Identification_value:</b> <span class="s_identification_value_call1"></span> <br />
+<b>Purpose_code: </b> <span class="s_purpose_code_call1"></span> <br />
+<b> Account_number:</b> <span class="s_account_number_call1"></span> <br />
+<b>Beneficiary_relationship: </b> <span class="s_beneficiary_relationship_call1"></span> <br />
+<b> Sender_country:</b> <span class="s_sender_country_call1"></span> <br />
+<b>Sender_currency: </b> <span class="s_sender_currency_call1"></span> <br />
+<b>Sender_entity_type: </b> <span class="s_sender_entity_type_call1"></span> <br />
+
+</div>
+
+
+<div class='col-sm-6'>
+<h3 style='color:#800000'>Recipients Rapyd Banking Info</h3>
+<b>Wallet_ID </b> <span class="b_wallet_call1"></span><br />
+<b>Name </b> <span class="b_name_call1"></span><br />
+
+<b>Address: </b> <span class="b_address_call1"></span><br />
+<b>Email: </b> <span class="b_email_call1"></span><br />
+<b>Country: </b> <span class="b_country_call1"></span><br />
+<b>City: </b> <span class="b_city_call1"></span><br />
+<b>PostCode: </b> <span class="b_postcode_call1"></span><br />
+<b>Account No: </b> <span class="b_account_number_call1"></span><br />
+<b>Bank Name: </b> <span class="bank_name_call1"></span><br />
+<b>State: </b> <span class="b_state_call1"></span><br />
+<b>Identification Type: </b> <span class="b_identification_type_call1"></span><br />
+<b>Identification value: </b> <span class="b_identification_value_call1"></span><br />
+<b>Bic Swift: </b> <span class="b_bic_swift_call1"></span><br />
+<b>Ach Code: </b> <span class="b_ach_code_call1"></span><br />
+<b>Beneficiary Country: </b> <span class="b_beneficiary_country_call1"></span><br />
+<b>Beneficiary Entity Type: </b> <span class="b_beneficiary_entity_type_call1"></span>
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+
+
+
+</div>
+
+
+
+<div id="result_employee"></div>
+ <div id="loader_pro1_employee"></div>
+			<br><br>
+			<hr style='width:100%;' />
+			
+	
+	<br><br><br>					
+<div class="form-group">
+		
+			
+<form id="" method="post" >
+
+
+ <label style='padding:6px;font-size:16px;color:orange' >Select Your Payments Wallets</label>
+<select id='wallet_select' class='w_id col-sm-12 form-control'>
+<option value='0' >Select Wallet</option>
+</select>
+<div id="wallet_select_empty"></div>
+                        <div id="loader_pro1"></div>
+ </div>	
+ 
+ <br><br>
+
+
+ <div class="form-group alerts alert-warning">
+              <label style="a" >Pick Salary Payment Date and Month</label>
+              <input type="date" class="col-sm-12 form-control" id="b_date" name="b_date" placeholder="" >
+           
+			</div><br><br>
+
+
+
+ <div class="form-group alerts alert-warning">
+              <label style="a" >Amount to Send(USD)</label>
+              <input type="text" class="col-sm-12 form-control" id="ux_amount" name="ux_amount" placeholder="Amount to Send" >
+           
+			</div><br><br>
+			
+
+
+
+ <div class="form-group alerts alert-warning">
+              <label style="a" >Reason for Sending Fund Eg. Buying of TextBooks</label>
+              <input type="text" class="col-sm-12 form-control" id="ux_reason" name="ux_reason" placeholder="Reason for Sending Fund" >
+           
+			</div><br><br>
+
+ 
+
+                        <div id="loader_paye"></div>
+                        <div id="result_paye"></div>
+                  
+
+                    <input type="button" id="paye_btn" class="pull-right seeking_css payebtn col-sm-12" value="Send Payments to Bank Account Now" /><br>
+                </form>
+				
+
+ <!-- Modal content ends-->
+          
+        </div>
+        <div class="modal-footer" style='color:black; background:#ddd'>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+ <!-- Modal one ends-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Modal two Starts -->
+
+<div class="container">
+ 
+  <div class="modal fade" id="myModal_p3" role="dialog">
+   <div class="full-screen modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing" style='height:1000px;'>
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style='color:black; background:#ddd'>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Send  Payments via Wallets/Funds Transfer System</h4>
+        </div>
+        <div class="modal-body">
+ <!-- Modal content starts-->
+
+<br>
+ 
+ 
+ 
+ <script>
+ 
+		
+// start Payments
+$(document).ready(function(){
+
+$('#transfer_btn').click(function(){
+
+var employeers_wallet_id = $('#wallet_select2').val();
+var employees_wallet_id = $('#employees_wallet_id_single1').val();
+var creator_id1 = localStorage.getItem('useridsessdatafa');
+var b_date1 = $('#b_date1').val();
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+var url_content1cp = window.location.href;
+var url_p1cp = new URL(url_content1cp);
+var ee_uid = url_p1cp.searchParams.get("id");
+var ee_token = url_p1cp.searchParams.get("token");
+
+
+
+var ux_amount1 = $('#ux_amount1').val();
+var ux_reason1 = $('#ux_reason1').val();
+
+
+
+if(employeers_wallet_id==0){
+alert('Please Select Payers/Senders Wallets ID');
+}
+
+
+else if(employees_wallet_id==''){
+alert('Please Enter Recipients Wallets ID');
+}
+else if(b_date1==''){
+alert('Please Select Salary Payment Date and Month');
+}
+
+else if(ux_amount1==""){
+alert('Amount to Send Cannot be empty');
+}
+
+else if(isNaN(ux_amount1)){
+  alert("Amount to Send must be a number");
+}
+
+
+else if(ux_amount1 > 1000){
+alert('For Testing Purpose, Amount to Send should not be more than 1,000(USD). Please enter lesser amount');
+}
+
+
+else if(ux_reason1==""){
+alert('Reason for Sending Money Cannot be empty');
+}
+else{
+$('#loader_transfer').fadeIn(400).html('<br><div class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait,  payment is being Transfer to Recipients Wallets</div><br>');
+
+
+var datasend = {
+employeers_wallet_id:employeers_wallet_id,
+employees_wallet_id:employees_wallet_id,
+creator_id1:creator_id1,
+b_date1:b_date1,
+ee_token:ee_token,
+ee_uid:ee_uid,
+ux_amount1:ux_amount1,
+ux_reason1:ux_reason1
+};
+
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'payout_transfer_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+$('#loader_transfer').hide();
+$('#result_transfer').html(msg);
+//setTimeout(function(){ $('#result_transfer').html(''); }, 5000);				
+					
+			}
+			
+		});
+		
+		}
+
+
+})
+
+});
+
+// ends payments
+ </script>
+ 
+ 
+ 
+<form id="" method="post" >
+
+ 
+ <div class="form-group">
+ <label style='padding:6px;font-size:16px;color:#1F45FC' >Select Your Payers  Wallets (Source Wallets ID)</label>
+<select id='wallet_select2' class='w_id2 col-sm-12 form-control'>
+<option value='0' >Select Wallet</option>
+</select>
+<div id="wallet_select_empty2"></div>
+                        <div id="loader_pro12"></div>
+ </div>	
+
+ <br><br>
+ <div class="form-group">
+ <label style='padding:6px;font-size:16px;color:#1F45FC' >Recipients Wallet Id (Destination Wallets Id)</label>
+<input type='text' id='employees_wallet_id_single1' class='employees_wallet_id_single1 col-sm-12 form-control' value=''>
+ </div>	
+ 
+ <br><br>
+ <div class="form-group alerts alert-warning">
+              <label style="a" >Pick Salary Payment Date and Month</label>
+              <input type="date" class="col-sm-12 form-control" id="b_date1" name="b_date1" placeholder="" >
+           
+			</div><br>
+			
+
+ <div class="form-group alerts alert-warning">
+              <label style="a" >Amount to Transfer(USD)</label>
+              <input type="text" class="col-sm-12 form-control" id="ux_amount1" name="ux_amount1" placeholder="Amount to Send" >
+           
+			</div><br>
+			
+
+
+
+ <div class="form-group alerts alert-warning">
+              <label style="a" >Reason for Sending Fund Eg. Paying For School Fees.</label>
+              <input type="text" class="col-sm-12 form-control" id="ux_reason1" name="ux_reason1" placeholder="Reason for Sending Fund" >
+           
+			</div><br>
+ 
+
+                        <div id="loader_transfer"></div>
+                        <div id="result_transfer"></div>
+                  
+
+                    <input type="button" id="transfer_btn" class="pull-right seeking_css  col-sm-12" value="Transfer Fund Now" /><br>
+                </form>
+
+ <!-- Modal content ends-->
+          
+        </div>
+        <div class="modal-footer" style='color:black; background:#ddd'>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+ <!-- Modal two ends-->
+
+
+</section>
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

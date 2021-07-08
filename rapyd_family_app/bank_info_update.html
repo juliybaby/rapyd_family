@@ -1,0 +1,1219 @@
+﻿
+
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdatafa');
+//alert(userid_sess_data1);
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+		$.get('settings_url_frontend.html', function(data) {
+   // alert(data);
+   var publicURLfa =data;
+localStorage.setItem('p_urlfa', publicURLfa);
+});
+
+
+
+});
+
+
+
+
+
+
+$(document).ready(function(){
+
+
+var userid_sess_data = localStorage.getItem('useridsessdatafa');
+var fullname_sess_data = localStorage.getItem('fullnamesessdatafa');
+var username_sess_data = userid_sess_data;
+var email_sess_data = localStorage.getItem('emailsessdatafa');
+var photo_sess_data = localStorage.getItem('photosessdatafa');
+var user_rank_sess_data = localStorage.getItem('userranksessdatafa');
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+var rec = "<span>" +
+"<img src='"+url_xcc1+"uploads/" + photo_sess_data +"'  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#0088cc;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #8B008B;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#8B008B;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #0088cc;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+.category_post1{
+background-color: #0088cc;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: -999;
+}
+.category_post1:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+
+ <section id="content" class="ac-content">
+
+
+
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+
+
+ <li class="navgate_no"><a title='Back to Dashboard' href="dashboard.html" style="color:white;font-size:14px;"><button class="category_post1">Back to Dashboard</button></a>
+ 
+
+
+
+
+
+
+<li class="navgate">
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+  <span class='myd_photo_sess'></span>
+
+More<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<b style='color:black;'>(<span class='myd_fullname_sess'></span>)</b><br><br>
+<li><a title='Logout' href="logout.html"><span style='font-size:30px;color:#8B008B;' class='fa fa-sign-out'></span> Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+
+      </ul>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+
+.senddata1_css{
+background:#8B008B;
+color:white;
+cursor:pointer;
+border:none;
+padding:2px;
+border-radius:20%;
+text-align:center
+
+}
+
+
+.senddata1_css:hover{
+background:orange;color:white;
+
+}
+
+
+</style>
+
+
+
+<!--load A ends here-->
+
+
+<br><br>
+
+
+
+
+
+
+
+
+
+<!--start form post row-->
+<div class="row">
+<br>
+<marquee><b style='font-family:comic sans ms;color:#800000;font-size:16px;'>(Your Fullname: <span class='myd_fullname_sess'></span>)</b></marquee>
+
+
+
+<style>
+.map_css{
+background: #8B008B;
+color:white;
+padding:4px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+}
+
+.map_css:hover{
+background: black;
+color:white;
+
+}
+
+
+.map_css1{
+background: #ec5574;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+
+}
+
+
+.map_css1:hover{
+background: #800000;
+color:white;
+
+}
+
+
+
+
+
+.title_css{
+//background: green;
+color:#0088cc;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: #c1c1c1;
+color:black
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: #c1c1c1;
+color:black;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_cssa{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_cssa:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+      
+</div>
+<!--form 1 ends-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="font-size:30px;color:#800000" >
+<center>Update Your Bank Info as Payer for Payouts
+</div><br>
+
+This Banking info updates Here will enable you(Payer/Sender) to Payout to your Recipients Bank Account.<br>
+
+<br><b> Becareful with any Data you are Editing 
+here. By default it works with the Payout to Bank. Your Payer/Sender Info here will 
+represent the Sender Info during Senders Payout
+to Recipients Bank Account. ========></b><b style='color:red'> (For More Informations, Please See Disurbse Payout to Bank Account API Details.) </b><br><br> 
+
+
+<div style='color:red'><b>Warning!!!:</b> Do not change any information in the form below unless you know what you are doing. Just click <b>Update Button Now</b> to Update your Bank Info</div>
+<br>
+
+
+<br>
+<style>
+
+
+.wallets_css{
+background:purple;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+font-size:20px;
+}
+
+
+.wallets_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+
+
+.action_css{
+background:#ec5574;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+</style>
+
+
+
+
+
+ <!-- Starts 1-->
+ 
+ 
+ 
+ 
+
+        <script>
+
+$(document).ready(function(){
+
+$('#pay_updates_btn').click(function(){
+var creator_id1 = localStorage.getItem('useridsessdatafa');
+var s_description = $('#s_description').val();
+var s_merchant_reference_id = $('#s_merchant_reference_id').val();
+var s_payout_currency = $('#s_payout_currency').val();
+var s_payout_method_type = $('#s_payout_method_type').val();
+var s_name = $('#s_name').val();
+var s_address = $('#s_address').val();
+var s_city = $('#s_city').val();
+var s_state = $('#s_state').val();
+var s_date_of_birth = $('#s_date_of_birth').val();
+var s_postcode = $('#s_postcode').val();
+var s_phonenumber = $('#s_phonenumber').val();
+var s_remitter_account_type = $('#s_remitter_account_type').val();
+var s_source_of_income = $('#s_source_of_income').val();
+var s_identification_type = $('#s_identification_type').val();
+var s_identification_value = $('#s_identification_value').val();
+var s_purpose_code = $('#s_purpose_code').val();
+var s_account_number = $('#s_account_number1').val();
+var s_beneficiary_relationship = $('#s_beneficiary_relationship').val();
+var s_sender_country = $('#s_sender_country').val();
+var s_sender_currency = $('#s_sender_currency').val();
+var s_sender_entity_type = $('#s_sender_entity_type').val();
+
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+if(creator_id1==""){
+alert('There is an issue with Admin Session ID.');
+}
+
+else if(s_description==""){
+alert('Amount Cannot be Empty.');
+}
+/*
+else if(isNaN(amount1)){
+  alert("Amount must be a number");
+}
+*/
+
+else if(s_merchant_reference_id==""){
+alert('Currency Cannot be Empty');
+}
+
+else if(s_payout_currency==""){
+alert('Payment Description Cannot be Empty');
+}
+else if(s_payout_method_type==""){
+alert('Name on Card Cannot be Empty');
+}
+
+else if(s_name==""){
+alert('Card No Cannot be Empty');
+}
+
+else if(s_address==""){
+alert('Card Expiration Date Cannot be Empty');
+}
+
+else if(s_city==""){
+alert('Card Expiration Year Cannot be Empty');
+}
+
+
+else if(s_state==""){
+alert('Card CVV Cannot be Empty');
+}
+
+
+else{
+$('#loader_updates_rapyd').fadeIn(400).html('<br><div class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait, Bank Payout Info. is Being Updated</div><br>');
+
+var datasend = {
+s_description:s_description,
+s_merchant_reference_id:s_merchant_reference_id,
+s_payout_currency:s_payout_currency,
+s_payout_method_type:s_payout_method_type,
+s_name:s_name,
+s_address:s_address,
+s_city:s_city,
+s_state:s_state,
+s_date_of_birth:s_date_of_birth,
+s_postcode:s_postcode,
+s_phonenumber:s_phonenumber,
+s_remitter_account_type:s_remitter_account_type,
+s_source_of_income:s_source_of_income,
+s_identification_type:s_identification_type,
+s_identification_value:s_identification_value,
+s_purpose_code:s_purpose_code,
+s_account_number:s_account_number,
+s_beneficiary_relationship:s_beneficiary_relationship,
+s_sender_country:s_sender_country,
+s_sender_currency:s_sender_currency,
+s_sender_entity_type:s_sender_entity_type,
+creator_id1:creator_id1
+};
+		
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'bank_info_updates_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+$('#loader_updates_rapyd').hide();
+$('#result_updates_rapyd').html(msg);
+//setTimeout(function(){ $('#result_updates_rapyd').html(''); }, 5000);				
+					
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+        </script>
+
+		
+
+
+<form id="" method="post" >
+
+<div class='row' style='background:#ddd;color:black;'>
+
+<div class='col-sm-8'>
+
+ <div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Payout Descriptions</label>
+<input type="text" class="col-sm-12 form-control" id="s_description" name="s_description" value="Salary Payout to Employee Bank Account" >
+</div><br>
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Merchant Reference Id</label>
+<input type="text" class="col-sm-12 form-control" id="s_merchant_reference_id" name="s_merchant_reference_id" value="GHY-0YU-HUJ-POI" >
+</div><br>
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Payout Currency</label>
+<input type="text" class="col-sm-12 form-control" id="s_payout_currency" name="s_payout_currency" value="USD" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Payout Method Type</label>
+<input type="text" class="col-sm-12 form-control" id="s_payout_method_type" name="s_payout_method_type" value="us_general_bank" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Employee Name</label>
+<input type="text" class="col-sm-12 form-control" id="s_name" name="s_name" value="John Doe" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Address</label>
+<input type="text" class="col-sm-12 form-control" id="s_address" name="s_address" value="123 First Street" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;City</label>
+<input type="text" class="col-sm-12 form-control" id="s_city" name="s_city" value="Anytown" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;State</label>
+<input type="text" class="col-sm-12 form-control" id="s_state" name="s_state" value="NY" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Date of Birth</label>
+<input type="text" class="col-sm-12 form-control" id="s_date_of_birth" name="s_date_of_birth" value="22/02/1980" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Postcode</label>
+<input type="text" class="col-sm-12 form-control" id="s_postcode" name="s_postcode" value="12345">
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Phonenumber</label>
+<input type="text" class="col-sm-12 form-control" id="s_phonenumber" name="s_phonenumber" value="621212938122" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Remitter_account_type</label>
+<input type="text" class="col-sm-12 form-control" id="s_remitter_account_type" name="s_remitter_account_type" value="Individual" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Source_of_income</label>
+<input type="text" class="col-sm-12 form-control" id="s_source_of_income" name="s_source_of_income" value="Salary" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Identification_type</label>
+<input type="text" class="col-sm-12 form-control" id="s_identification_type" name="s_identification_type" value="License No" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Identification_value</label>
+<input type="text" class="col-sm-12 form-control" id="s_identification_value" name="s_identification_value" value="123456789" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Purpose_code</label>
+<input type="text" class="col-sm-12 form-control" id="s_purpose_code" name="s_purpose_code" value="ABCDEFGHI" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Account_number</label>
+<input type="text" class="col-sm-12 form-control" id="s_account_number1" name="s_account_number1" value="123456789" >
+</div><br>
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;beneficiary_relationship</label>
+<input type="text" class="col-sm-12 form-control" id="s_beneficiary_relationship" name="s_beneficiary_relationship" value="client" >
+</div><br>
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Sender_country</label>
+<input type="text" class="col-sm-12 form-control" id="s_sender_country" name="s_sender_country" value="US" >
+</div><br>
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Sender_currency</label>
+<input type="text" class="col-sm-12 form-control" id="s_sender_currency" name="s_sender_currency" value="USD" >
+</div><br>
+
+<div class="form-group">
+<label>&nbsp;&nbsp;&nbsp;&nbsp;Sender_entity_type</label>
+<input type="text" class="col-sm-12 form-control" id="s_sender_entity_type" name="s_sender_entity_type" value="Individual" >
+</div><br>
+
+
+
+                        <div id="loader_updates_rapyd"></div>
+                        <div id="result_updates_rapyd"></div>
+                  
+
+                    <input type="button" id="pay_updates_btn" class="pull-right action_css pay_updates_btn col-sm-12" value="Updates Bank Info Now" /><br>
+                </form>
+				
+				
+				
+</div>
+
+
+<div class='col-sm-4'>
+<h3 style='color:#800000'> Updated Bank Info Will Appear Here</h3><br>
+  <script>
+
+$(document).ready(function(){
+var creator_id2 = localStorage.getItem('useridsessdatafa');
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+if(creator_id2==""){
+alert('There is an issue with Admin Session ID.');
+}
+
+
+else{
+$('#loader_updates_rapyd1').fadeIn(400).html('<br><div class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait, Bank Payout Info. is Being Loaded</div><br>');
+
+var datasend = {
+creator_id2:creator_id2
+};
+		
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'bank_info_load_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+$('#loader_updates_rapyd1').hide();
+$('#result_updates_rapyd1').html(msg);
+//setTimeout(function(){ $('#result_updates_rapyd1').html(''); }, 5000);				
+					
+			}
+			
+		});
+		
+		}
+					
+});
+        </script>
+<div id="loader_updates_rapyd1"></div>
+<div id="result_updates_rapyd1"></div>
+</div>
+
+
+</div>
+ <!-- ends 1-->
+
+
+
+
+
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+<p class="footer_text1"><span class='myd_title_header'></span></p>
+<p class="footer_text2"><span class='myd_title_footer'></span></p>
+<br>
+
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+  
+
+
+</section>
+
+
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

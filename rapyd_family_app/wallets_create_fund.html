@@ -1,0 +1,2176 @@
+﻿
+
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdatafa');
+//alert(userid_sess_data1);
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+		$.get('settings_url_frontend.html', function(data) {
+   // alert(data);
+   var publicURLfa =data;
+localStorage.setItem('p_urlfa', publicURLfa);
+});
+
+
+});
+
+
+
+
+
+
+$(document).ready(function(){
+
+
+var userid_sess_data = localStorage.getItem('useridsessdatafa');
+var fullname_sess_data = localStorage.getItem('fullnamesessdatafa');
+var username_sess_data = userid_sess_data;
+var email_sess_data = localStorage.getItem('emailsessdatafa');
+var photo_sess_data = localStorage.getItem('photosessdatafa');
+var user_rank_sess_data = localStorage.getItem('userranksessdatafa');
+
+
+
+var rec = "<span>" +
+"<img src='"+url_xcc1+"uploads/" + photo_sess_data +"'  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#0088cc;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #8B008B;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#8B008B;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #0088cc;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+.category_post1{
+background-color: #0088cc;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: -999;
+}
+.category_post1:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+ <section id="content" class="ac-content">
+
+
+
+<style>
+
+.notify_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: green; padding: 2px 6px;font-size:14px; }
+.notify_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+</style>
+
+
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+
+
+ <li class="navgate_no"><a title='Back to Dashboard' href="dashboard.html" style="color:white;font-size:14px;"><button class="category_post1">Back to Dashboard</button></a>
+ 
+
+
+
+
+
+
+<li class="navgate">
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+  <span class='myd_photo_sess'></span>
+
+More<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<b style='color:black;'>(<span class='myd_fullname_sess'></span>)</b><br><br>
+<li><a title='Logout' href="logout.html"><span style='font-size:30px;color:#8B008B;' class='fa fa-sign-out'></span> Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+
+      </ul>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+
+.senddata1_css{
+background:#8B008B;
+color:white;
+cursor:pointer;
+border:none;
+padding:2px;
+border-radius:20%;
+text-align:center
+
+}
+
+
+.senddata1_css:hover{
+background:orange;color:white;
+
+}
+
+.chat_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #34BB0C; padding: 2px 6px;font-size:14px; }
+.chat_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+
+</style>
+
+
+
+<!--load A ends here-->
+
+
+<br><br>
+
+
+
+
+
+
+
+<!--start right column all-->
+    <div class="right-column-all_NO>
+
+
+
+
+<style>
+.post_padding{
+padding-top:-70px;
+   
+}
+
+.post_bgcolor{
+background: #dddddd;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+  .post_padding{
+  padding-top:1px; 
+ margin-top:-170px
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post_padding{
+ padding-top:1px;
+ margin-top:-170px
+  }
+}
+
+
+.postbtn_dashedline{
+  border-bottom: 2px dashed #ec5574;
+
+}
+
+
+
+/* restrict responsive image to max size of 400px */
+.responsive_image1 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.responsive_image2{
+  width: 100%;
+  height: auto;
+}
+
+.responsive_video {
+  width: 100%;
+height: 400px;
+  max-width: 500px;
+  max-height: 600px;
+  //height: auto;
+}
+
+
+</style>
+<!-- all post Section start -->
+<div  class="post_padding section_padding post_bgcolor">
+
+
+<!--start blog post row-->
+ <div class="row">
+
+
+
+<style>
+.c_counter {
+ padding:10px;
+color:white;
+background:purple;
+border:none;
+cursor:pointer;
+}
+
+.c_counter:hover {
+color:white;
+background:black;
+}
+
+.social_all{
+ padding:6px;
+color:white;
+background:red;
+border:none;
+cursor:pointer;
+border-radius:15%;
+
+}
+
+.s_icon {
+color:white;
+//background:black;
+font-size:20px;
+//border-radius:50%;
+cursor:pointer;
+}
+
+
+.s_icon:hover {
+color:white;
+background:red;
+}
+
+
+</style>
+
+
+
+
+
+</div>
+<!--end blog post row-->
+
+
+<!--start form post row-->
+<div class="row">
+<br>
+<marquee><b style='font-family:comic sans ms;color:#800000;font-size:16px;'>(Your Fullname: <span class='myd_fullname_sess'></span>)</b></marquee>
+
+
+<!--post start-->
+<div class="blog_post_form col-sm-12 alerts alert-warning hide_this_form_on_submit_post" id="blog_tab1">
+
+<!--form 1 starts-->
+<div style="text-align:left;font-size:14px;font-family:verdana;color:black">
+
+
+<style>
+.map_css{
+background: #8B008B;
+color:white;
+padding:4px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+}
+
+.map_css:hover{
+background: black;
+color:white;
+
+}
+
+
+.map_css1{
+background: #ec5574;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+
+}
+
+
+.map_css1:hover{
+background: #800000;
+color:white;
+
+}
+
+
+
+
+
+.title_css{
+//background: green;
+color:#0088cc;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: #c1c1c1;
+color:black
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: #c1c1c1;
+color:black;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_cssa{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_cssa:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+      
+</div>
+<!--form 1 ends-->
+
+
+</div>
+
+<!--post end-->
+
+
+</div>
+<!--end form post row-->
+
+
+
+
+
+
+
+
+
+<!-- Main Post Database query starts here -->
+
+
+
+
+
+<!-- Main Post start -->
+
+
+
+
+<div style="font-size:30px;color:#800000" >
+<center>Create & Fund Your Rapyd Wallets
+</div><br>
+
+<center><div><button data-toggle='modal' data-target='#myModal_action_wallets'  title='Create Rapyd Wallets' class='wallets_css'>
+<span style='font-size:20px;color:white;' class='fa fa-edit'></span> Create Rapyd Wallets</button></div></center><br>
+
+
+<br>
+<style>
+
+
+.wallets_css{
+background:purple;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+font-size:20px;
+}
+
+
+.wallets_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+
+
+.action_css{
+background:#ec5574;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+
+.map1_css{
+background:purple;
+color:black;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.map1_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+.point_count { color: #fff; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #ec5574; padding: 2px 6px;font-size:20px; }
+.point_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:20px; }
+
+.myform_btn_css{
+
+background:navy;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.myform_btn_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+.s_css{
+background:#ddd;
+color:black;
+padding:10px;
+border:none;
+cursor:pointer;
+border-style: dashed; border-width:4px; border-color: #0088cc;
+}
+
+
+.s_css:hover{
+background:orange;
+color:black;
+}
+
+
+
+.point_count { color: #fff; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #ec5574; padding: 2px 6px;font-size:20px; }
+.point_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:20px; }
+
+
+.point_count2 { color: #fff; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: red; padding: 2px 6px;font-size:14px; }
+
+
+
+.invite_btn1{
+background-color: navy;
+padding: 6px;
+color:white;
+font-size:24px;
+//border-radius: 50%;
+border: none;
+cursor: pointer;
+text-align: center;
+padding:20px;
+}
+.invite_btn1:hover {
+background: black;
+color:white;
+}
+
+
+
+//ccc fff ddd
+.task_css{
+background: #c1c1c1;
+color:black;
+padding:6px;
+border:none;
+}
+
+.task_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.edit_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+}
+
+.edit_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.delete_css{
+background: red;
+color:white;
+padding:6px;
+border:none;
+}
+
+.delete_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+.eng_css{
+background: blue;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.eng_css:hover{
+background: orange;
+color:black;
+
+}
+
+.op_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.op_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+
+.des_css{
+background: purple;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.des_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+.sup_css{
+background: #800000;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.sup_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+
+.action_css2{
+background:#32CD32;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css2:hover{
+background:orange;
+color:black;
+
+
+}
+</style>
+
+
+
+
+<script>
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+var owner_id = localStorage.getItem('useridsessdatafa');
+        var page_row_call_wallets =3;
+
+        $(document).ready(function(){
+ 
+            loadTask_wallets();
+
+$("#loader_posts_wallets").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Wallets <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+            $("#loadmore_btn_wallets").click(function(){
+
+// var issue = $("#issue").val();
+                var queryid_wallets = Number($("#form_queryid_wallets").val());
+                var querytotal_wallets = Number($("#form_querytotal_wallets").val());
+                queryid_wallets += page_row_call_wallets;
+                if(queryid_wallets <= querytotal_wallets){
+               
+                    $("#form_queryid_wallets").val(queryid_wallets);
+                    loadTask_wallets();
+                }
+
+                if(queryid_wallets >= querytotal_wallets){
+               
+                   alert('No More Content to Load');
+$("#nomore_content_check_wallets").html("<div style='background:purple;color:white;padding:10px;'>No More Content to Load <br> <center><button style='background:#3b5998;border:none;color:white;padding:10px;cursor:pointer' title='Refresh Page' class='reloadPageTask_wallets'>Refresh Page</button></center> </div>");   
+//setTimeout(function(){ $('#result_task_updates').html(''); }, 5000);	
+
+$('#loader_post_wallets').hide();
+                }
+
+
+
+
+
+            });
+        });
+
+        function loadTask_wallets(){
+            var queryid_wallets = $("#form_queryid_wallets").val();
+            var querytotal_wallets = $("#form_querytotal_wallets").val();
+
+
+$("#loader_posts_wallets").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Wallets <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+            $.ajax({
+                url: url_xcc1+'wallets_load.php',
+                type:'post',
+                data:{queryid_wallets:queryid_wallets,page_row_call_wallets:page_row_call_wallets, owner_id:owner_id},
+                dataType:'json',
+                success:function(response){
+
+if(response ==11){
+//alert('No Wallets has been created Yet');
+$("#pcheck_wallets").html("<div style='background:red;color:white;padding:10px;'>No Wallets has been created Yet</div>");   
+$("#loader_posts_wallets").hide();
+return false;
+}
+
+                    loadAllContent_wallets(response);
+
+$("#loader_posts_wallets").hide();
+
+                }
+            });
+
+
+
+
+        }
+
+        function loadAllContent_wallets(data){
+
+            var len_wallets = data.length;
+
+
+
+            for(var i=0; i<len_wallets; i++){
+                if(i == 0){
+                    var querytotal_wallets = data[i]['allcount'];
+                    $("#form_querytotal_wallets").val(querytotal_wallets);
+
+                }else{
+
+
+                    var id = data[i]['id'];
+                    var phone_number = data[i]['phone_number'];
+                    var email = data[i]['email'];
+                    var last_name = data[i]['last_name'];
+                    var first_name = data[i]['first_name'];
+                    var wallet_id = data[i]['wallet_id'];
+                    var fund = data[i]['fund'];
+                    var timing = data[i]['timer'];
+var fund_time = data[i]['fund_time'];
+var creator_id = data[i]['creator_id'];
+                 
+var rec_wallets = "<div class='rows' style='width:100%;'><div  class='col-sm-12 task_css notify-fade_" + id +"'  style='width:100%;' id='contents_data' >" +      
+"<span class='col-sm-2' >"+last_name+"</span>" +
+"<span class='col-sm-2' >"+first_name+"</span>" +
+"<span class='col-sm-3' >"+wallet_id+"</span>" +
+"<span class='col-sm-2' >"+fund+"</span>" +
+"<span class='col-sm-1'><span class='fa fa-calendar'></span> <span data-livestamp='" + timing + "'></span></span>"+
+"<button data-toggle='modal' data-target='#myModal_action_fund' style='color:white;font-size:14px;cursor:pointer;' title='Fund Wallets' class='col-sm-1 action_css btn_action_wallets pull-right'   data-id=\""+ id +"\" data-email=\""+ email +"\"  data-lastname=\""+last_name +"\" data-firstname=\""+ first_name +"\"  data-walletid=\""+ wallet_id +"\" data-fund=\""+ fund +"\"  data-timing=\""+ timing +"\"> <span style='font-size:20px;color:black;' class='fa fa-money'></span> Fund Wallets</button>"+
+
+"<div class='loader-post1b_" + id +"'></div>"+
+"<div class='result-post1b_" + id +"'></div>"+
+
+"<div><button class='btn_bal_check btn_action_wallets pull-right col-sm-1 action_css2' title='Check Wallets Balance'   data-id=\""+ id +"\" data-email=\""+ email +"\"  data-lastname=\""+last_name +"\" data-firstname=\""+ first_name +"\"  data-walletid=\""+ wallet_id +"\" data-fund=\""+ fund +"\"  data-timing=\""+ timing +"\"><span style='font-size:20px;color:black;' class='fa fa-money'></span> Check Balance </button></div><br>"+
+
+"</div><br></div><br>";
+
+
+
+
+
+ $("#res_Task_wallets").append(rec_wallets);
+
+
+$("#loader_posts_wallets").hide();
+
+                }
+            }
+        }
+
+
+
+// loading ends here
+
+
+
+
+
+
+
+// Task updates Calls Starts
+
+$(document).ready(function(){
+//$('.btn_action_wallets').click(function(){
+$(document).on( 'click', '.btn_action_wallets', function(){ 
+
+
+var id = $(this).data('id');
+var firstname = $(this).data('firstname');
+var lastname = $(this).data('lastname');
+var userid = id;
+var email = $(this).data('email');
+var walletid = $(this).data('walletid');
+var fund = $(this).data('fund');
+var timing = $(this).data('timing');
+//alert(timing);
+var timing_call_wallets = "<span class='fa fa-calendar'></span> <span data-livestamp='" + timing + "'></span>";
+
+
+$('.id_call_wallets').html(id);
+$('.firstname_call_wallets').html(firstname);
+$('.lastname_call_wallets').html(lastname);
+$('.userid_call_wallets').html(userid);
+$('.email_call_wallets').html(email);
+$('.walletid_call_wallets').html(walletid);
+$('.fund_call_wallets').html(fund);
+$('.timing_call_wallets').html(timing);
+
+
+$('.id_call2_wallets').val(id).value;
+$('.walletid_call2_wallets').val(walletid).value;
+
+		
+	})
+
+
+});
+//Task Update Calls Ends
+
+
+
+
+// refresh page on click
+
+$(document).ready(function(){
+//$('.reloadPageTask_wallets').click(function(){
+$(document).on( 'click', '.reloadPageTask_wallets', function(){ 
+//window.reload();
+window.location='wallets_create_fund.html';
+	})
+
+
+});
+
+
+
+
+
+
+// check wallets balance starts here
+
+
+$(document).ready(function(){
+
+//$('.btn_bal_check').click(function(){
+$(document).on( 'click', '.btn_bal_check', function(){ 
+// confirm start
+ if(confirm("Are you sure you want to Check Balance to this Wallets:")){
+ var url_xcc1= localStorage.getItem('p_urlfa');
+ var id = $(this).data('id');
+ 
+var w_id = $(this).data('walletid');
+var c_id = localStorage.getItem('useridsessdatafa');
+$(".loader-post1b_"+id).fadeIn(400).html('<br><div style="color:black;background:#ddd;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Wallets Balance is being Checked...</div>');
+
+
+var datasend = {'w_id': w_id, c_id:c_id};
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'wallets_balance_check.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+$(".loader-post1b_"+id).hide();
+$(".result-post1b_"+id).html(msg);
+//setTimeout(function(){ $(".result-post1b_"+id).html(''); }, 5000);
+//location.reload();
+
+}
+			
+});
+}
+
+// confirm ends
+
+                });
+
+
+            });
+
+
+// check Wallets balance ends here
+</script>
+
+
+
+
+
+
+
+<!-- start loading data --->
+
+<div id="content">
+
+ 
+   <br>
+
+
+
+
+<table width="100%" id="task_label" border="0">
+        <tr class="tr_header">
+            <th class='col-sm-2'>Lastname</th>
+            <th class='col-sm-2'>Firstname</th>
+            <th class='col-sm-3'>Wallets ID</th>
+            <th class='col-sm-2'>Funds(USD)</th>
+            <th class='col-sm-1'>Time</th>
+            <th class='col-sm-2'>Actions</th>
+
+        </tr>
+    </table>
+  
+        <div id="res_Task_wallets"  style='width:100%'></div>
+<div id="nomore_content_check_wallets"></div>
+<div id="loader_check_wallets"></div>
+<div id="result_check_wallets"></div>
+
+        <div id="">
+            <input type="hidden" id="form_queryid_wallets" value="0" />
+            <input type="hidden" id="form_querytotal_wallets" value="0" />
+<br>
+
+<hr style='width:100%;'>
+<br>
+<div id="network_error"></div>
+<div id="pcheck_wallets"></div>
+
+<div style='width:100%;' id="loader_posts_wallets"></div><br>
+<input type="button" style='width:100%' title='LoadMore Wallets' class="button action_css" value="LoadMore Wallets" id="loadmore_btn_wallets" />
+ 
+        </div>
+    </div>
+
+
+<!-- end loading data  --->
+
+
+
+
+
+
+
+
+
+
+<!-- Main Post ends -->
+
+
+<!-- Main Post Database query ends here-->
+
+
+
+
+
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+<p class="footer_text1"><span class='myd_title_header'></span></p>
+<p class="footer_text2"><span class='myd_title_footer'></span></p>
+<br>
+
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+  <!--end right column all-->    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.title_css{
+//background: green;
+color:green;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: purple;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: green;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_css{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+        </script>
+
+
+<style>
+.upload_progress{
+padding:10px;
+background:green;
+color:white;
+cursor:pointer;
+min-width:30px;
+}
+
+#imageupload_preview
+{
+max-height:200px;
+max-width:200px;
+}
+
+// make modal full screen
+/*
+.full-screen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+*/
+
+.modal-dialog {
+  width: 98%;
+  height: 92%;
+  padding: 0;
+}
+
+.modal-content {
+  height: 99%;
+}
+
+</style>
+
+
+
+
+
+ <!-- Modal one Starts -->
+
+<div class="container">
+ 
+  <div class="modal fade" id="myModal_action_fund" role="dialog">
+   <div class="full-screen modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing" style='height:1200px;'>
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style='color:black; background:#ddd'>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Wallets Funding System</h4>
+        </div>
+        <div class="modal-body">
+ <!-- Modal content starts-->
+
+
+
+<b>Wallets ID: </b> <span class="walletid_call_wallets"></span><br />
+
+<b>Firstname: </b> <span class="firstname_call_wallets"></span><br />
+<b>Lastname: </b> <span class="lastname_call_wallets"></span><br />
+
+<b>Email: </b> <span class="email_call_wallets"></span><br />
+<b>Available Funds: </b> <span class="fund_call_wallets"></span><br />
+<b>Time Created: </b> <span class="timing_call_wallets"></span><br />
+
+
+
+
+        <script>
+
+$(document).ready(function(){
+
+$('#pay_btn1').click(function(){
+var amount1 = $('#amount1').val();
+var currency1 = $('#currency1').val();
+var description1 = $('#description1').val();
+var name1 = $('#name1').val();
+var number1 = $('#number1').val();
+var expiration_month1 = $('#expiration_month1').val();
+var expiration_year1 = $('#expiration_year1').val();
+var cvv1 = $('#cvv1').val();
+var walletid_call2_wallets = $('.walletid_call2_wallets').val();
+
+var creator_id1 = localStorage.getItem('useridsessdatafa');
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+if(walletid_call2_wallets==""){
+alert('There is an issue with Admin Wallets ID.');
+}
+
+else if(creator_id1==""){
+alert('There is an issue with Admin Session ID.');
+}
+
+else if(amount1==""){
+alert('Amount Cannot be Empty.');
+}
+
+else if(isNaN(amount1)){
+  alert("Amount must be a number");
+}
+
+
+else if(amount1 > 1000){
+alert('For Rapyd Sandbox Testing, You cannot Fund more than 1,000(USD) at an Interval.');
+}
+
+else if(currency1==""){
+alert('Currency Cannot be Empty');
+}
+
+else if(description1==""){
+alert('Payment Description Cannot be Empty');
+}
+else if(name1==""){
+alert('Name on Card Cannot be Empty');
+}
+
+else if(number1==""){
+alert('Card No Cannot be Empty');
+}
+
+else if(expiration_month1==""){
+alert('Card Expiration Date Cannot be Empty');
+}
+
+else if(expiration_year1==""){
+alert('Card Expiration Year Cannot be Empty');
+}
+
+
+else if(cvv1==""){
+alert('Card CVV Cannot be Empty');
+}
+
+
+else{
+$('#loader_wallets_fund').fadeIn(400).html('<br><div class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait, Wallets is Being Funded</div><br>');
+var datasend = {walletid_call2_wallets:walletid_call2_wallets,creator_id1:creator_id1, amount1:amount1, currency1:currency1,description1:description1,name1:name1,number1:number1,expiration_month1:expiration_month1,expiration_year1:expiration_year1,cvv1:cvv1};
+		
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'wallets_fund_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+$('#loader_wallets_fund').hide();
+$('#result_wallets_fund').html(msg);
+//setTimeout(function(){ $('#result_wallets_fund').html(''); }, 5000);				
+					
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+
+
+        </script>
+
+
+
+
+<div style='font-size:20px;color:purple'><center>Fund Wallets by RAPYD Collect</center></div>
+
+<form id="" method="post" >
+ <div class="form-group">
+              <label style="a" >Amount to Fund(USD)</label><span style='color:red'> Eg. Max. of 1000 USD for Rapyd Sandbox testing per Funding....</span>
+              <input type="text" class="col-sm-12 form-control" id="amount1" name="amount1" placeholder="Enter Amount"  value='1000'>
+            </div><br>
+
+
+
+ <div class="form-group">
+              <label style="b" >Currency</label>
+              <select class="col-sm-12 form-control" id="currency1" name="currency1"  >
+<option value='USD'>USD</option>
+</select>
+            </div><br>
+
+ <div class="form-group">
+              <label style="c" >Payment/Funding Description</label>
+              <input type="text" class="col-sm-12 form-control" id="description1" name="description1" value="Wallets Funding" >
+            </div><br>
+
+
+
+<div class='alerts alert-success'>
+
+
+<div style='font-size:20px;color:purple'><center>Rapyd Payment Method via Visa Card</center></div>
+
+<br>
+ <span style='color:red'>Warning... For testing Purposes Please do not Edit Rapyd Payments card details below. 
+Infact I have already disabled the payments form input below...</span><br><br>
+
+ <div class="form-group">
+              <label style="" >Name on Visa Card</label>
+              <input disabled type="text" class="col-sm-12 form-control" id="name1" name="name1" value="Test User" >
+            </div><br>
+
+ <div class="form-group">
+              <label style="" >Card No</label>
+              <input disabled  type="text" class="col-sm-12 form-control" id="number1" name="number1" value="4111111111111111" >
+            </div><br>
+
+
+
+<div class='rows'>
+
+
+ <span class="col-sm-4">
+              <label style="" >Expiration Month</label>
+              <input disabled type="text" class="col-sm-4 form-control" id="expiration_month1" name="expiration_month1" value="08" >
+            </span>
+ <span class="col-sm-4">
+              <label style="" >Expiration Year</label>
+              <input disabled type="text" class="col-sm-4 form-control" id="expiration_year1" name="expiration_year1" value="24" >
+            </span>
+
+<span class="col-sm-4">
+              <label style="" >CVV</label>
+              <input disabled type="text" class="col-sm-4 form-control" id="cvv1" name="cvv1" value="789" >
+            </span>
+
+</div>
+
+
+
+</div>
+
+
+<input type="hidden" id="" class='id_call2_wallets' name="id_call2_wallets" value="" >
+<input type="hidden" id="" class='walletid_call2_wallets' name="walletid_call2_wallets" value="" >
+
+
+                        <div id="loader_wallets_fund"></div>
+                        <div id="result_wallets_fund"></div>
+                  
+
+                    <input type="button" id="pay_btn1" class="pull-right seeking_css pay_btn1 col-sm-12" value="Fund Wallets" /><br>
+                </form>
+
+ <!-- Modal content ends-->
+          
+        </div>
+        <div class="modal-footer" style='color:black; background:#ddd'>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+ <!-- Modal one ends-->
+
+
+
+
+
+
+ <!-- Modal two Starts -->
+
+<div class="container">
+ 
+  <div class="modal fade" id="myModal_action_wallets" role="dialog">
+   <div class="full-screen modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing" style='height:1200px;'>
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style='color:black; background:#ddd'>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Wallets Creation System</h4>
+        </div>
+        <div class="modal-body">
+ <!-- Modal content starts-->
+
+
+
+
+
+
+        <script>
+
+$(document).ready(function(){
+
+$('#save_btn1').click(function(){
+var first_name = $('#first_name').val();
+var last_name = $('#last_name').val();
+var creator_id = localStorage.getItem('useridsessdatafa');
+var email = $('#email_w').val();
+var phone_number = $('#phone_number_w').val();
+
+
+var mothers_name = $('#mothers_name_w').val();
+var contact_type = $('#contact_type_w').val();
+var identification_type = $('#identification_type_w').val();
+var identification_number = $('#identification_number_w').val();
+var date_of_birth = $('#date_of_birth_w').val();
+var country = $('#country_w').val();
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+if(creator_id==""){
+alert('There is an issue with Admin Session ID.');
+}
+
+
+else if(first_name==""){
+alert('First Name Cannot be Empty');
+}
+
+else if(last_name==""){
+alert('Last Name Cannot be Empty');
+}
+
+
+else if(email==""){
+alert('Emaill Cannot be Empty');
+}
+
+else if(phone_number==""){
+alert('phone_number Cannot be Empty');
+}
+else if(mothers_name==""){
+alert('mothers_name Cannot be Empty');
+}
+
+else if(contact_type==""){
+alert('contact_type Cannot be Empty');
+}
+
+else if(identification_type==""){
+alert('identification_type Cannot be Empty');
+}
+
+else if(identification_number==""){
+alert('identification_number Cannot be Empty');
+}
+
+else if(date_of_birth==""){
+alert('date_of_birth Cannot be Empty');
+}
+
+else if(country==""){
+alert('country Cannot be Empty');
+}
+
+
+
+else{
+$('#loader_wallets_create').fadeIn(400).html('<br><div class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait, Wallets is Being Created</div><br>');
+var datasend = {first_name:first_name, last_name:last_name,creator_id:creator_id,email:email, phone_number:phone_number, mothers_name:mothers_name, contact_type:contact_type, identification_type:identification_type,identification_number:identification_number, date_of_birth:date_of_birth, country:country};
+		
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'wallets_create_action.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+$('#loader_wallets_create').hide();
+$('#result_wallets_create').html(msg);
+//setTimeout(function(){ $('#result_wallets_create').html(''); }, 5000);				
+					
+			}
+			
+		});
+		
+		}
+		
+	})
+					
+});
+
+
+
+
+
+
+        </script>
+
+
+
+<!--start form-->
+<div class='col-sm-12 ' style='background:#ddd;'>
+
+<form id="" method="post">
+
+ <div class="form-group">
+              <label style="" for="first_name">Firstname</label>
+              <input type="text" class="col-sm-12 form-control" id="first_name" name="first_name" placeholder="Enter First Name" value=''>
+            </div><br>
+
+ <div class="form-group">
+              <label style="" for="last_name">Lastname</label>
+              <input type="text" class="col-sm-12 form-control" id="last_name" name="last_name" placeholder="Enter Last Name" value=''>
+            </div><br><br>
+<div style='background:#c1c1c1;color:black;font-family:comic sans ms;'>
+
+<center><h3> Wallets Contacts Info</h3></center>
+
+<div style='color:red'><b>Warnings !!!:</b> You are advised not to edit the Wallets Contact Info below unless you know what you are doing.
+ By default the Contacts info below works with <b>RAPYD Sandbox Wallets Creation API</b>
+</div>
+
+
+
+ <div class="form-group">
+              <label style="" for="email_w">Email</label>
+              <input type="text" class="col-sm-12 form-control" id="email_w" name="email_w" placeholder="" value='johndoe@rapyd.net'>
+            </div><br>
+
+ <div class="form-group">
+              <label style="phone_number_w" for="">Phone Number</label>
+              <input type="text" class="col-sm-12 form-control" id="phone_number_w" name="phone_number_w" placeholder="" value='+14155551234'>
+            </div><br><br>
+ 
+ <div class="form-group">
+              <label style="" for="mothers_name_w">Mothers Name</label>
+              <input type="text" class="col-sm-12 form-control" id="mothers_name_w" name="mothers_name_w" placeholder="" value='Jane Smith'>
+            </div><br><br>
+ 
+ <div class="form-group">
+              <label style="" for="contact_type_w">Contact Type</label>
+              <input type="text" class="col-sm-12 form-control" id="contact_type_w" name="contact_type_w" placeholder="" value='personal'>
+            </div><br><br>
+ 
+ <div class="form-group">
+              <label style="" for="identification_type_w">Identification Type</label>
+              <input type="text" class="col-sm-12 form-control" id="identification_type_w" name="identification_type_w" placeholder="" value='PA'>
+            </div><br><br>
+ 
+ <div class="form-group">
+              <label style="" for="identification_number_w">Identification Number</label>
+              <input type="text" class="col-sm-12 form-control" id="identification_number_w" name="identification_number_w" placeholder="" value='1234567890'>
+            </div><br><br>
+ 
+ <div class="form-group">
+              <label style="" for="date_of_birth_w">Date of Birth</label>
+              <input type="text" class="col-sm-12 form-control" id="date_of_birth_w" name="date_of_birth_w" placeholder="" value='11/22/2000'>
+            </div><br><br>
+ 
+ <div class="form-group">
+              <label style="" for="country_w">Country</label>
+              <input type="text" class="col-sm-12 form-control" id="country_w" name="country_w" placeholder="" value='US'>
+            </div><br><br>
+ 
+ 
+
+                    <div class="form-group">
+                        <div id="loader_wallets_create"></div>
+                        <div id="result_wallets_create"></div>
+                    </div>
+
+                    <input type="button" id="save_btn1" class="pull-right seeking_css save_btn1" value="Create Wallets" />
+                </form>
+
+
+
+
+
+ <!-- Modal content ends-->
+          
+        </div>
+        <div class="modal-footer" style='color:black; background:#ddd'>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+ <!-- Modal two ends-->
+
+
+
+
+</section>
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

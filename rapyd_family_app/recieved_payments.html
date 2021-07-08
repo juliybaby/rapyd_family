@@ -1,0 +1,1642 @@
+﻿
+
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdatafa');
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+		$.get('settings_url_frontend.html', function(data) {
+   // alert(data);
+   var publicURLfa =data;
+localStorage.setItem('p_urlfa', publicURLfa);
+});
+
+//var url_xcc1= localStorage.getItem('p_urlfa');
+
+});
+
+
+
+
+
+
+$(document).ready(function(){
+
+
+var userid_sess_data = localStorage.getItem('useridsessdatafa');
+var fullname_sess_data = localStorage.getItem('fullnamesessdatafa');
+var username_sess_data = userid_sess_data;
+var email_sess_data = localStorage.getItem('emailsessdatafa');
+var photo_sess_data = localStorage.getItem('photosessdatafa');
+var user_rank_sess_data = localStorage.getItem('userranksessdatafa');
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+var rec = "<span>" +
+"<img src='"+url_xcc1+"uploads/" + photo_sess_data +"'  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#0088cc;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #8B008B;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#8B008B;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+.category_post1{
+background-color: #0088cc;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: -999;
+}
+.category_post1:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+
+ <section id="content" class="ac-content">
+
+
+<style>
+
+.notify_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: green; padding: 2px 6px;font-size:14px; }
+.notify_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+</style>
+
+
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+
+
+ <li class="navgate_no"><a title='Back to Dashboard' href="dashboard.html" style="color:white;font-size:14px;"><button class="category_post1">Back to Dashboard</button></a>
+ 
+
+
+
+
+
+
+<li class="navgate">
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+  <span class='myd_photo_sess'></span>
+
+More<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<b style='color:black;'>(<span class='myd_fullname_sess'></span>)</b><br><br>
+<li><a title='Logout' href="logout.html"><span style='font-size:30px;color:#8B008B;' class='fa fa-sign-out'></span> Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+
+      </ul>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+
+.senddata1_css{
+background:#8B008B;
+color:white;
+cursor:pointer;
+border:none;
+padding:2px;
+border-radius:20%;
+text-align:center
+
+}
+
+
+.senddata1_css:hover{
+background:orange;color:white;
+
+}
+
+.chat_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #34BB0C; padding: 2px 6px;font-size:14px; }
+.chat_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+
+</style>
+
+
+
+<!--load A ends here-->
+
+
+<br><br>
+
+
+
+
+
+
+
+<!--start right column all-->
+    <div class="right-column-all_NO>
+
+
+
+
+<style>
+.post_padding{
+padding-top:-70px;
+   
+}
+
+.post_bgcolor{
+background: #dddddd;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+  .post_padding{
+  padding-top:1px; 
+ margin-top:-170px
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post_padding{
+ padding-top:1px;
+ margin-top:-170px
+  }
+}
+
+
+.postbtn_dashedline{
+  border-bottom: 2px dashed #ec5574;
+
+}
+
+
+
+/* restrict responsive image to max size of 400px */
+.responsive_image1 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.responsive_image2{
+  width: 100%;
+  height: auto;
+}
+
+.responsive_video {
+  width: 100%;
+height: 400px;
+  max-width: 500px;
+  max-height: 600px;
+  //height: auto;
+}
+
+
+</style>
+<!-- all post Section start -->
+<div  class="post_padding section_padding post_bgcolor">
+
+
+<!--start blog post row-->
+ <div class="row">
+
+
+
+<style>
+.c_counter {
+ padding:10px;
+color:white;
+background:purple;
+border:none;
+cursor:pointer;
+}
+
+.c_counter:hover {
+color:white;
+background:black;
+}
+
+.social_all{
+ padding:6px;
+color:white;
+background:red;
+border:none;
+cursor:pointer;
+border-radius:15%;
+
+}
+
+.s_icon {
+color:white;
+//background:black;
+font-size:20px;
+//border-radius:50%;
+cursor:pointer;
+}
+
+
+.s_icon:hover {
+color:white;
+background:red;
+}
+
+
+</style>
+
+
+
+
+
+</div>
+<!--end blog post row-->
+
+
+<!--start form post row-->
+<div class="row">
+<br>
+<marquee><b style='font-family:comic sans ms;color:#800000;font-size:16px;'>(Your Fullname: <span class='myd_fullname_sess'></span>)</b></marquee>
+
+
+<!--post start-->
+<div class="blog_post_form col-sm-12 alerts alert-warning hide_this_form_on_submit_post" id="blog_tab1">
+
+<!--form 1 starts-->
+<div style="text-align:left;font-size:14px;font-family:verdana;color:black">
+
+
+<style>
+.map_css{
+background: #8B008B;
+color:white;
+padding:4px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+}
+
+.map_css:hover{
+background: black;
+color:white;
+
+}
+
+
+.map_css1{
+background: #ec5574;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+
+}
+
+
+.map_css1:hover{
+background: #800000;
+color:white;
+
+}
+
+
+
+
+
+.title_css{
+//background: green;
+color:#0088cc;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: #c1c1c1;
+color:black
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: #c1c1c1;
+color:black;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_cssa{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_cssa:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+      
+</div>
+<!--form 1 ends-->
+
+
+</div>
+
+<!--post end-->
+
+
+</div>
+<!--end form post row-->
+
+
+
+
+
+
+
+
+
+<!-- Main Post Database query starts here -->
+
+
+
+
+
+<!-- Main Post start -->
+
+
+
+
+<div style="font-size:30px;color:#800000" >
+<center>Recieved Payments Tracking and Monitoring System
+</div><br>
+
+
+
+<style>
+
+.action_css{
+background:#ec5574;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+.action_css1{
+background:#32CD32;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css1:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+
+.collect_css{
+background:#ec5574;
+color:white;
+border:none;
+padding:10px;
+border-radius:50%;
+font-size:16px;
+}
+.collect_css:hover{
+background:orange;
+color:black;
+}
+
+
+.disburse_css{
+background:purple;
+color:white;
+border:none;
+padding:10px;
+border-radius:50%;
+font-size:16px;
+}
+.disburse_css:hover{
+background:orange;
+color:black;
+}
+
+
+
+.walleting_css{
+background:#800000;
+color:white;
+border:none;
+padding:10px;
+border-radius:50%;
+font-size:16px;
+}
+.walleting_css:hover{
+background:orange;
+color:black;
+}
+
+
+.myform_btn_css{
+
+background:navy;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.myform_btn_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+.s_css{
+background:#ddd;
+color:black;
+padding:10px;
+border:none;
+cursor:pointer;
+border-style: dashed; border-width:4px; border-color: #0088cc;
+}
+
+
+.s_css:hover{
+background:orange;
+color:black;
+}
+
+
+.invite_btn1{
+background-color: navy;
+padding: 6px;
+color:white;
+font-size:24px;
+//border-radius: 50%;
+border: none;
+cursor: pointer;
+text-align: center;
+padding:20px;
+}
+.invite_btn1:hover {
+background: black;
+color:white;
+}
+
+
+
+//ccc fff ddd
+.task_css{
+background: #c1c1c1;
+color:black;
+padding:6px;
+border:none;
+}
+
+.task_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.edit_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+}
+
+.edit_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.delete_css{
+background: red;
+color:white;
+padding:6px;
+border:none;
+}
+
+.delete_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+.eng_css{
+background: blue;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.eng_css:hover{
+background: orange;
+color:black;
+
+}
+
+.op_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.op_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+
+.des_css{
+background: purple;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.des_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+.sup_css{
+background: #800000;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.sup_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+		
+		
+
+.p1_css{
+background: #FF00FF;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.p1_css:hover{
+background: orange;
+color:black;
+
+}
+
+.p2_css{
+background: #008000;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.p2_css:hover{
+background: orange;
+color:black;
+
+}
+
+</style>
+
+
+
+
+
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+<script>
+var owner_id = localStorage.getItem('useridsessdatafa');
+var owner_email = localStorage.getItem('emailsessdatafa');
+
+//alert(owner_email);
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+//alert(user_id);
+        var page_row_call_recieved =3;
+
+        $(document).ready(function(){
+ 
+            loadTask_recieved();
+
+$("#loader_posts_recieved").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+
+            $("#loadmore_btn_recieved").click(function(){
+
+
+
+                var queryid_recieved = Number($("#form_queryid_recieved").val());
+                var querytotal_recieved = Number($("#form_querytotal_recieved").val());
+                queryid_recieved += page_row_call_recieved;
+                if(queryid_recieved <= querytotal_recieved){
+               
+                    $("#form_queryid_recieved").val(queryid_recieved);
+                    loadTask_recieved();
+                }
+
+                if(queryid_recieved >= querytotal_recieved){
+               
+                   alert('No More Recieved Payments Data to Load');
+				  // location.reload();
+$("#nomore_content_check_recieved").html("<div style='background:purple;color:white;padding:10px;'>No More Recieved Payments Data to Load <br> <center><button style='background:#3b5998;border:none;color:white;padding:10px;cursor:pointer' title='Refresh Page' class='reloadPageTask_recieved'>Refresh Page</button></center> </div>");   
+//setTimeout(function(){ $('#result_task_updates_recieved').html(''); }, 5000);	
+
+$('#loader_post_recieved').hide();
+                }
+
+
+
+
+
+            });
+        });
+
+        function loadTask_recieved(){
+            var queryid_recieved = $("#form_queryid_recieved").val();
+            var querytotal_recieved = $("#form_querytotal_recieved").val();
+
+$("#loader_posts_recieved").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+            $.ajax({
+                url: url_xcc1+'recieved_payments_load.php',
+                type:'post',
+                data:{queryid_recieved:queryid_recieved,page_row_call_recieved:page_row_call_recieved, owner_id:owner_id, owner_email:owner_email},
+                dataType:'json',
+                success:function(response){
+
+if(response ==11){
+//alert('You have not Recieved any Fund Yet');
+$("#pcheck_recieved").html("<div style='background:red;color:white;padding:10px;'>You Have not Recieved any Fund yet. Recieved Fund are Tracked with Recipients Registered Email Address..</div>");   
+$("#loader_posts_recieved").hide();
+return false;
+}
+
+                    loadAllContent_recieved(response);
+
+$("#loader_posts_recieved").hide();
+                }
+            });
+
+
+
+
+        }
+
+        function loadAllContent_recieved(data){
+
+            var len1_recieved = data.length;
+
+
+
+            for(var i=0; i<len1_recieved; i++){
+                if(i == 0){
+                    var querytotal_recieved = data[i]['allcount'];
+                    $("#form_querytotal_recieved").val(querytotal_recieved);
+
+                }else{
+
+			
+                    var id = data[i]['id'];
+					var userid = data[i]['userid'];
+					var usertoken = data[i]['usertoken'];
+					 var photo = data[i]['photo'];
+                    var fullname = data[i]['fullname'];
+                    var department = data[i]['department'];
+                    var salary_amount = data[i]['salary_amount'];
+                    var salary_month = data[i]['salary_month'];
+                    var timing = data[i]['timing'];
+                    var payment_method = data[i]['payment_method'];
+      var payment_method2 = data[i]['payment_method2'];
+	        var user_ewallet_id = data[i]['user_ewallet_id'];
+			      var payout_id = data[i]['payout_id'];
+				        var payout_status = data[i]['payout_status'];
+var creator_id = data[i]['creator_id'];
+var reason = data[i]['reason'];
+var sender_name = data[i]['sender_name'];
+var sender_photo = data[i]['sender_photo'];
+
+					//alert(photo);	
+if(payout_status =='Created'){
+var pay1_css= 'p1_css';
+}	
+if(payout_status =='PEN'){
+var pay1_css= 'p1_css';
+}				
+if(payout_status =='Completed'){
+var pay1_css= 'p2_css';
+}	
+if(payout_status =='CLO'){
+var pay1_css= 'p2_css';
+}						
+						
+if(payment_method =='Disburse'){
+var pay_css= 'eng_css';
+}
+if(payment_method =='Wallet'){
+var pay_css= 'des_css';
+}
+
+
+if(payout_status =='Created'){
+var c_pay1 = 'action_css';
+var c_pay2 = 'complete_pay_btn1';
+var c_pay3  ='Payout Awaits Completion';
+}
+
+if(payout_status =='PEN'){
+var c_pay1 = 'action_css';
+var c_pay2 = 'complete_pay_btn1';
+var c_pay3  ='Transfer Awaits Completion';
+}
+
+
+if(payout_status =='Completed'){
+var c_pay1 = 'action_css1';
+var c_pay2 = 'complete_pay_btn_no';
+var c_pay3  ='Payout Completed';
+}
+
+
+if(payout_status =='CLO'){
+var c_pay1 = 'action_css1';
+var c_pay2 = 'complete_pay_btn_no';
+var c_pay3  ='Transfer Completed';
+}
+
+
+/*
+if(payment_method =='Transfer'){
+var pay_css= 'op_css';
+}
+
+if(department == 'Engineering'){
+var st_css= 'eng_css';
+}
+
+if(department == 'Operations'){
+var st_css= 'op_css';
+}
+
+if(department == 'Design'){
+var st_css= 'des_css';
+}
+if(department == 'Supports'){
+var st_css= 'sup_css';
+}
+*/
+
+
+var rec_recieved = "<div class='rows' style='width:100%;'><div  class='col-sm-12 task_css notify-fade_" + id +"'  style='width:100%;' id='contents_data' >" +      
+"<span class='col-sm-1'><img title='Owner' alt='Image' class='img-circle' style='border-style: solid; border-width:3px; border-color:#3b5998; width:40px;height:40px; max-width:40px;max-height:40px;' src='"+url_xcc1+"uploads/" + sender_photo +"' /></span>" +
+"<span class='col-sm-2' >"+sender_name+"</span>" +
+"<span class='col-sm-1' >"+salary_amount+"</span>" +
+"<span class='col-sm-2' >"+reason+"</span>" +
+"<span class='col-sm-2 "+pay_css+" ' >"+payment_method+" ("+payment_method2+")</span>" +
+//"<span class='col-sm-1' >"+department+"</span>" +
+"<span class='col-sm-1 "+pay1_css+"' >"+payout_status+"</span>" +
+"<span class='col-sm-1'><span class='fa fa-calendar'></span> <span data-livestamp='" + timing + "'></span></span>"+
+
+
+"<div class='loader-post1_" + id +"'></div>"+
+"<div class='result-post1_" + id +"'></div>"+
+
+"<div><button class='"+c_pay1+" btn_action_track pull-right col-sm-2 "+c_pay2+" ' id='' data-id=\""+ id +"\" data-payout_id=\""+ payout_id +"\" data-payout_status=\""+ payout_status +"\" data-creator_id=\""+ creator_id +"\" data-salary=\""+ salary_amount +"\"  title=' "+c_pay3+" '><span style='font-size:20px;color:black;' class='fa fa-money'></span> "+c_pay3+" </button></div><br>"+
+
+
+
+//"<div><button class='action_css btn_action_track pull-right col-sm-2 complete_pay_btn' id='' data-id=\""+ id +"\" data-payout_id=\""+ payout_id +"\"  title='Complete Payments'><span style='font-size:20px;color:black;' class='fa fa-money'></span> Complete Payments</button></div><br>"+
+
+
+"</div><br></div><br>";
+
+
+
+
+
+ $("#res_Task_recieved").append(rec_recieved);
+
+
+$("#loader_posts_recieved").hide();
+
+                }
+            }
+        }
+
+
+
+// loading ends here
+
+
+
+
+// refresh page on click
+
+$(document).ready(function(){
+//$('.reloadPageTask_recieved').click(function(){
+$(document).on( 'click', '.reloadPageTask_recieved', function(){ 
+window.location.href = window.location.href;
+//location.reload();
+//window.location='pay.html';
+	})
+
+
+});
+
+
+
+
+
+
+// Task updates Calls ends
+</script>
+
+
+
+
+
+
+
+<!-- start loading data --->
+
+<div style='width:100%;background:#ddd;color:black;font-size:18px;text-align:center;'>Recieved Transactions/Payments Details</div>
+   <br>
+<div id="content">
+
+ 
+
+
+
+
+<table width="100%" id="task_label" border="0">
+        <tr class="tr_header">
+            <th class='col-sm-1'>Payer Photo</th>
+            <th class='col-sm-2'>Payer Name</th>
+            <th class='col-sm-1'>Amount(USD)</th>
+            <th class='col-sm-2'>Payment<br>Reason</th>
+
+<th class='col-sm-2'>Payments Method</th>
+<th class='col-sm-1'>Payment Status</th>
+            <th class='col-sm-1'>Created Time</th>
+            <th class='col-sm-2'>Actions</th>
+
+        </tr>
+    </table>
+  
+        <div id="res_Task_recieved"  style='width:100%'></div>
+<div id="nomore_content_check_recieved"></div>
+<div id="loader_check_recieved"></div>
+<div id="result_check_recieved"></div>
+
+        <div id="">
+            <input type="hidden" id="form_queryid_recieved" value="0" />
+            <input type="hidden" id="form_querytotal_recieved" value="0" />
+<br>
+
+<hr style='width:100%;'>
+<br>
+<div id="network_error"></div>
+<div id="pcheck_recieved"></div>
+
+<div style='width:100%;' id="loader_posts_recieved"></div><br>
+<input type="button" style='width:100%' title='LoadMore Recieved Payments' class="button action_css" value="LoadMore Recieved Payments Info" id="loadmore_btn_recieved" />
+ 
+        </div>
+    </div>
+
+
+<!-- end loading data  --->
+
+
+
+
+
+
+
+
+
+
+<!-- Main Post ends -->
+
+
+<!-- Main Post Database query ends here-->
+
+
+
+
+
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+<p class="footer_text1"><span class='myd_title_header'></span></p>
+<p class="footer_text2"><span class='myd_title_footer'></span></p>
+<br>
+
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+  <!--end right column all-->    
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2513 @@
+﻿
+
+
+
+
+<script>
+
+//check if session is set and prevent Direct Access to the App.
+
+var userid_sess_data1 = localStorage.getItem('useridsessdatafa');
+
+
+if (userid_sess_data1 == null || userid_sess_data1 == undefined) {
+
+  alert('You Must Login To Access this Page');
+window.location='login.html';
+//return false;
+}
+
+
+</script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+<title> </title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="landing page, website design" />
+
+
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+<script src="moment.js"></script>
+	<script src="livestamp.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+<script>
+$(document).ready(function(){
+
+$(document).ready(function(){
+		$.get('settings_url_frontend.html', function(data) {
+   // alert(data);
+   var publicURLfa =data;
+localStorage.setItem('p_urlfa', publicURLfa);
+});
+
+
+});
+
+
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+var userid_sess_data = localStorage.getItem('useridsessdatafa');
+var fullname_sess_data = localStorage.getItem('fullnamesessdatafa');
+var username_sess_data = userid_sess_data;
+var email_sess_data = localStorage.getItem('emailsessdatafa');
+var photo_sess_data = localStorage.getItem('photosessdatafa');
+var user_rank_sess_data = localStorage.getItem('userranksessdatafa');
+
+
+
+var rec = "<span>" +
+"<img src='" + url_xcc1 +"uploads/" + photo_sess_data +"'  style='text-align:left;border-radius:50%;width:60px;max-width:60px;height:60px;max-height:60px;border-style: solid; border-width:3px; border-color: orange;'>" +
+ "</span>";
+
+$('.myd_photo_sess').html(rec);
+$('.myd_fullname_sess').html(fullname_sess_data);
+$('.myd_userid_sess').html(userid_sess_data);
+$('.myd_username_sess').html(username_sess_data);
+
+
+//$('#myd_userid_sess_value').val(userid_sess_data).value;
+//$('#myd_userid_sess_id').html(userid_sess_data);
+
+
+
+});
+
+</script>
+
+
+<style>
+
+
+
+
+
+
+
+/*ensure that category button does not jam about us or product section when on mobile ends here.*/
+
+
+
+
+.section_padding {
+padding: 60px 40px;
+}
+
+.imagelogo_li_remove {
+list-style-type: none;
+margin: 0;
+ padding: 0;
+}
+
+.imagelogo_data{
+ width:120px;
+ height:80px;
+}
+
+
+
+  .navbar {
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+   background-color:#0088cc;
+
+    z-index: 9999;
+    border: 0;
+    font-family: comic sans ms;
+//color:white;
+  }
+
+
+
+  
+.navbar-toggle {
+background-color:orange;
+  }
+
+.navgate {
+padding:16px;color:white;
+
+}
+
+.navgate:hover{
+ color: black;
+ background-color: orange;
+
+}
+
+
+.navbar-header{
+height:60px;
+}
+
+.navbar-header-collapse-color {
+background:white;
+}
+
+.dropdown_bgcolor{
+
+background: #8B008B;
+color:white;
+}
+
+.dropdown_dashedline{
+ border-bottom: 2px dotted white;
+}
+
+.navgate101:hover{
+background:purple;
+color:white;
+
+}
+
+
+
+
+
+/* home starts */
+  
+.home_image {	
+width:100%;
+/*
+height:500px;
+max-height:500px;
+*/
+height:100vh;
+max-height:100vh;
+       
+        
+}
+
+
+
+.creator_imagelogo_data{
+ width:60px;
+ height:60px;
+}
+
+/* make modal appear at center of the page */
+.modal-appear-center {
+margin-top: 25%;
+//width:40%;
+}
+
+
+/* make modal appear at center of the page */
+.modal-appear-center1 {
+margin-top: 15%;
+//width:40%;
+}
+
+
+.modal_head_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+
+.modal_footer_color{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+}
+
+/*
+modal_mobile_resize 
+
+@media screen and (max-width: 600px) {
+  .modal_mobile_resize {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+
+*/
+
+
+
+.btn_copyright{
+//background: orange;
+color:orange;
+//padding:2px;
+font-weight:200;
+}
+
+
+.btn_copyright:hover {
+background: black;
+color:pink;
+font-weight:700;
+}
+
+
+
+
+/* footer */
+
+
+  .navbar_footer {
+letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 0;
+    //background-color:#8B008B;
+    color:white;
+    padding:20px;
+    border: 0;
+    font-family: comic sans ms;
+  }
+
+
+.footer_bgcolor{
+background: black;
+}
+
+.footer_text1{
+color:white;
+font-size:20px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text2{
+color:grey;
+font-size:14px;
+border:none;
+cursor:pointer;
+}
+
+.footer_text1:hover{
+color:grey;
+}
+
+
+.footer_text2:hover{
+color:orange;
+}
+
+
+.footer_dashedline{
+ border-top: 1px dashed white;
+}
+
+
+
+.left_shifting{
+
+width:40%;
+}
+
+@media screen and (max-width: 768px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+.left-column-all {
+width:100%;
+
+}
+
+.home_resize_padding {
+padding-top:100px;
+}
+
+}
+
+.modaling_sizing{
+width:59%;
+}
+
+
+@media screen and (max-width: 768px) {
+.modaling_sizing {
+width:99%;
+
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center;
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+.modaling_sizing {
+width:99%;
+}
+
+.home_content_head {       
+margin-left:0px; 
+padding-top:10px;
+width:100%;
+text-align:center; 
+}
+
+
+
+}
+
+.category_post{
+background-color: #0088cc;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+width:100%;
+z-index: -999;
+}
+.category_post:hover {
+background: black;
+color:white;
+}	
+
+
+
+.category_post1{
+background-color: #0088cc;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 15%;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: -999;
+}
+.category_post1:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+
+
+.e_search_form{
+width: 38vw;
+height:60px;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:15%;
+color:black;
+font-size:16px;
+background:white;
+
+//transform: skew(-22deg);
+margin-left:-90px;
+
+}
+
+.e_search_form:hover{
+
+border-style: solid; border-width:4px; border-color: #824c4e;
+background: #dddddd;
+color: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .e_search_form{
+
+  width: 100%;
+  padding: 20px;
+margin-left:0px;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .e_search_form{
+  width: 100%;
+  padding: 20px 
+margin-left:0px; 
+  }
+}
+
+
+
+
+
+.readmore_btn{
+background-color: #8B008B;
+padding: 6px;
+color:white;
+font-size:14px;
+border-radius: 20%;
+border: none;
+cursor: pointer;
+text-align: center;
+//width:100%;
+z-index: -999;
+}
+.readmore_btn:hover {
+background: black;
+color:white;
+}	
+
+
+
+
+</style>
+
+
+
+<script>
+// set post url
+
+url_post_data ="";
+
+</script>
+
+    </head>
+    <body>
+
+ 
+</head>
+<body>
+
+
+
+
+ <section id="content" class="ac-content">
+
+
+
+<style>
+
+.notify_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: green; padding: 2px 6px;font-size:14px; }
+.notify_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+</style>
+
+
+
+<!-- start column nav-->
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+
+<div class="text-center">
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navgator">
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span>
+        <span class="navbar-header-collapse-color icon-bar"></span> 
+        <span class="navbar-header-collapse-color icon-bar"></span>                       
+      </button>
+     
+<li class="navbar-brand home_click imagelogo_li_remove" ><img class="img-rounded imagelogo_data" src="logo.png"></li>
+    </div>
+    <div class="collapse navbar-collapse" id="navgator">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+
+
+ <li class="navgate_no"><a title='Create and Fund Wallets' href="wallets_create_fund.html" style="color:white;font-size:14px;"><button class="category_post1">Create and <br>Fund Wallets</button></a>
+  <li class="navgate_no"><a title='Bank Info Updates' href="bank_info_update.html" style="color:white;font-size:14px;"><button class="category_post1">Update Bank<br> Info</button></a>
+ 
+
+ <li class="navgate_no"><a title='Add Families' data-toggle='modal' data-target='#myModal_emp' style="color:white;font-size:14px;"><button class="category_post1"><i  style="color:white;font-size:10px;" class="fa fa-edit" aria-hidden="true"></i> Add <br>Families</button></a>
+
+<li class="navgate_no"><a title='Track Payments' href="track_payments.html" style="color:white;font-size:14px;"><button class="category_post1">Track All<br> Transactions</button></a>
+
+<li class="navgate_no"><a title='Recieved Payments' href="recieved_payments.html" style="color:purple;font-size:14px;"><button class="category_post1">Recieved<br> Payments</button></a>
+
+
+
+
+
+
+
+<li class="navgate">
+
+<span class="dropdown">
+  <a style="color:white;font-size:14px;cursor:pointer;" title='View More Data' class="btn1 btn-default1 dropdown-toggle"  data-toggle="dropdown">
+  <span class='myd_photo_sess'></span>
+
+More<span class="caret"></span></a>
+
+<ul class="dropdown-menu">
+<b style='color:black;'>(<span class='myd_fullname_sess'></span>)</b><br><br>
+<li><a title='Logout' href="logout.html"><span style='font-size:30px;color:#8B008B;' class='fa fa-sign-out'></span> Logout</a></li>
+
+</ul></span>
+
+</li>
+
+
+
+      </ul>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</nav>
+
+
+    </div><br /><br />
+
+<!-- end column nav-->
+
+
+
+
+
+
+
+<style>
+
+
+.support_css{
+//border-radius:25%;min-width:25vw;background:#c1c1c1; border-bottom: 2px dashed purple;
+}
+
+.support_css:hover{
+background:white;color:black;
+}
+
+
+
+.s_css{
+background:#8B008B;
+color:white;
+cursor:pointer;
+border:none;
+padding:2px;
+border-radius:20%;
+text-align:center;
+font-size:20px;
+
+}
+
+
+.s_css:hover{
+background:orange;color:white;
+
+}
+
+.chat_count { color: #FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #34BB0C; padding: 2px 6px;font-size:14px; }
+.chat_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:14px; }
+
+
+</style>
+
+
+
+<!--load A ends here-->
+
+
+<br><br>
+
+
+
+
+
+
+
+<!--start right column all-->
+    <div class="right-column-all_NO>
+
+
+
+
+<style>
+.post_padding{
+padding-top:-70px;
+   
+}
+
+.post_bgcolor{
+background: #dddddd;
+   
+}
+
+
+@media screen and (max-width: 600px) {
+  .post_padding{
+  padding-top:1px; 
+ margin-top:-170px
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .post_padding{
+ padding-top:1px;
+ margin-top:-170px
+  }
+}
+
+
+.postbtn_dashedline{
+  border-bottom: 2px dashed #ec5574;
+
+}
+
+
+
+/* restrict responsive image to max size of 400px */
+.responsive_image1 {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.responsive_image2{
+  width: 100%;
+  height: auto;
+}
+
+.responsive_video {
+  width: 100%;
+height: 400px;
+  max-width: 500px;
+  max-height: 600px;
+  //height: auto;
+}
+
+
+</style>
+<!-- all post Section start -->
+<div  class="post_padding section_padding post_bgcolor">
+
+
+<!--start blog post row-->
+ <div class="row">
+
+
+
+<style>
+.c_counter {
+ padding:10px;
+color:white;
+background:purple;
+border:none;
+cursor:pointer;
+}
+
+.c_counter:hover {
+color:white;
+background:black;
+}
+
+.social_all{
+ padding:6px;
+color:white;
+background:red;
+border:none;
+cursor:pointer;
+border-radius:15%;
+
+}
+
+.s_icon {
+color:white;
+//background:black;
+font-size:20px;
+//border-radius:50%;
+cursor:pointer;
+}
+
+
+.s_icon:hover {
+color:white;
+background:red;
+}
+
+
+</style>
+
+
+
+
+
+</div>
+<!--end blog post row-->
+
+
+<!--start form post row-->
+<div class="row">
+<br>
+<marquee><b style='font-family:comic sans ms;color:#800000;font-size:16px;'>(Your Fullname: <span class='myd_fullname_sess'></span>)</b></marquee>
+
+
+<!--post start-->
+<div class="blog_post_form col-sm-12 alerts alert-warning hide_this_form_on_submit_post" id="blog_tab1">
+
+<!--form 1 starts-->
+<div style="text-align:left;font-size:14px;font-family:verdana;color:black">
+
+
+<style>
+.map_css{
+background: #8B008B;
+color:white;
+padding:4px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+}
+
+.map_css:hover{
+background: black;
+color:white;
+
+}
+
+
+.map_css1{
+background: #ec5574;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+
+}
+
+
+.map_css1:hover{
+background: #800000;
+color:white;
+
+}
+
+
+
+
+
+.title_css{
+//background: green;
+color:#0088cc;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: #c1c1c1;
+color:black
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: #c1c1c1;
+color:black;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_cssa{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_cssa:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+      
+</div>
+<!--form 1 ends-->
+
+
+</div>
+
+<!--post end-->
+
+
+</div>
+<!--end form post row-->
+
+
+
+
+
+
+
+
+
+<!-- Main Post Database query starts here -->
+
+
+
+
+
+<!-- Main Post start -->
+
+
+
+
+<div style="font-size:30px;color:#800000" >
+<center>Families & Friends Payments System<br>
+</div><br>
+
+<script>
+
+// Complete starts here starts here
+$(document).ready(function(){
+var idxc =localStorage.getItem('useridsessdatafa');
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+$(".loader_out").fadeIn(400).html('<br><div class="pull-right" style="color:black;background:#ddd;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Loading Payments Expenditure...</div>');
+var datasend = {'idxc': idxc};
+		// start Ajax
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'expenses.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+			
+
+//alert('Payout Successfully Completed');
+
+
+$(".loader_out").hide();
+$(".result_out").html(msg);
+
+
+
+}
+			
+});
+// end Ajax
+
+
+                });
+
+
+</script>
+
+<div class='loader_out'></div>
+<div class='result_out'></div>
+
+<button title='Add Families' data-toggle='modal' data-target='#myModal_emp' class="s_css">
+<i  style="color:white;font-size:10px;" class="fa fa-edit" aria-hidden="true"></i> Add Families</button>
+
+
+
+
+<br>
+<style>
+
+.action_css{
+background:#ec5574;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.action_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+
+.map1_css{
+background:purple;
+color:black;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.map1_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+
+.point_count { color: #fff; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #ec5574; padding: 2px 6px;font-size:20px; }
+.point_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:20px; }
+
+.myform_btn_css{
+
+background:navy;
+color:white;
+border:none;
+padding:10px;
+border-radius:10%;
+}
+
+
+.myform_btn_css:hover{
+background:orange;
+color:black;
+
+
+}
+
+.s_css{
+background:#ddd;
+color:black;
+padding:10px;
+border:none;
+cursor:pointer;
+border-style: dashed; border-width:4px; border-color: #0088cc;
+}
+
+
+.s_css:hover{
+background:orange;
+color:black;
+}
+
+
+
+.point_count { color: #fff; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: #ec5574; padding: 2px 6px;font-size:20px; }
+.point_count1 { color:#FFF; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: purple; padding: 2px 6px;font-size:20px; }
+
+
+.point_count2 { color: #fff; display: block; float: right; border-radius: 12px; border: 1px solid #2E8E12; background: red; padding: 2px 6px;font-size:14px; }
+
+
+
+.invite_btn1{
+background-color: navy;
+padding: 6px;
+color:white;
+font-size:24px;
+//border-radius: 50%;
+border: none;
+cursor: pointer;
+text-align: center;
+padding:20px;
+}
+.invite_btn1:hover {
+background: black;
+color:white;
+}
+
+
+
+//ccc fff ddd
+.task_css{
+background: #c1c1c1;
+color:black;
+padding:6px;
+border:none;
+}
+
+.task_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.edit_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+}
+
+.edit_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+//ccc fff ddd
+.delete_css{
+background: red;
+color:white;
+padding:6px;
+border:none;
+}
+
+.delete_css:hover{
+background: #ccc;
+color:black;
+
+}
+
+
+
+
+.eng_css{
+background: blue;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.eng_css:hover{
+background: orange;
+color:black;
+
+}
+
+.op_css{
+background: green;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.op_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+
+.des_css{
+background: purple;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.des_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+.sup_css{
+background: #800000;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.sup_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+.r_css{
+background: #0088cc;
+color:white;
+padding:6px;
+border:none;
+border-radius:10%;
+text-align:center;
+}
+
+.r_css:hover{
+background: orange;
+color:black;
+
+}
+
+
+</style>
+
+
+
+
+
+
+<script>
+
+// stopt all bootstrap drop down menu from closing on click inside
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+
+<script>
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+var owner_id = localStorage.getItem('useridsessdatafa');
+        var page_row_call =5;
+
+        $(document).ready(function(){
+ 
+            loadTask();
+
+$("#loader_posts").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+
+            $("#loadmore_btn").click(function(){
+
+
+
+ // var issue = $("#issue").val();
+                var queryid = Number($("#form_queryid").val());
+                var querytotal = Number($("#form_querytotal").val());
+                queryid += page_row_call;
+                if(queryid <= querytotal){
+               
+                    $("#form_queryid").val(queryid);
+                    loadTask();
+                }
+
+                if(queryid >= querytotal){
+               
+                   alert('No More Content to Load');
+$("#nomore_content_check").html("<div style='background:purple;color:white;padding:10px;'>No More Content to Load <br> <center><button style='background:#3b5998;border:none;color:white;padding:10px;cursor:pointer' title='Refresh Page' class='reloadPageTask'>Refresh Page</button></center> </div>");   
+//setTimeout(function(){ $('#result_task_updates').html(''); }, 5000);	
+
+$('#loader_post').hide();
+                }
+
+
+
+
+
+            });
+        });
+
+        function loadTask(){
+            var queryid = $("#form_queryid").val();
+            var querytotal = $("#form_querytotal").val();
+
+/*
+if(querytotal ==0){
+alert('No Content to Load Yet');
+$("#loader_posts").hide();
+}
+*/
+
+$("#loader_posts").fadeIn(400).html('<br><div style="color:black;background:white;padding:10px;">Please Wait. Loading Content <i class="fa fa-spinner fa-spin" style="font-size:20px"></i></div>');
+
+            $.ajax({
+                url: url_xcc1+'dashboard_load.php',
+                type:'post',
+                data:{queryid:queryid,page_row_call:page_row_call, owner_id:owner_id},
+                dataType:'json',
+                success:function(response){
+
+if(response ==11){
+//alert('No Data has been Recorded Yet');
+$("#pcheck").html("<div style='background:red;color:white;padding:10px;'>No Person Has been added by You. Try Add it now</div>");   
+$("#loader_posts").hide();
+return false;
+}
+
+                    loadAllContent(response);
+
+$("#loader_posts").hide();
+//$("#result_posts1").html(response);
+//setTimeout(function(){ $('#result_posts').html(''); }, 5000);	
+
+
+
+
+//hide issue details on page load
+        //$(document).ready(function(){
+           // $(".issueDetailsHide").hide();
+            //$("[id^='issueDetailsHide_']").hide("");
+        //});
+
+
+
+                }
+            });
+
+
+
+
+        }
+
+        function loadAllContent(data){
+
+            var len1 = data.length;
+
+
+
+            for(var i=0; i<len1; i++){
+                if(i == 0){
+                    var querytotal = data[i]['allcount'];
+                    $("#form_querytotal").val(querytotal);
+
+                }else{
+
+
+                    var id = data[i]['id'];
+                    var fullname = data[i]['fullname'];
+                    var email = data[i]['email'];
+                    var phone_no = data[i]['phone_no'];
+                    var photo = data[i]['photo'];
+                    var department = data[i]['department'];
+                    var created_time = data[i]['created_time'];
+                    var timing = data[i]['timer'];
+var token = data[i]['user_token'];
+ var salary = data[i]['salary'];                
+ var wallet_id = data[i]['wallet_id']; 
+ var first_name = data[i]['first_name']; 
+var last_name = data[i]['last_name']; 
+
+var b_name = data[i]['b_name'];
+var b_address  = data[i]['b_address'];
+var b_email = data[i]['b_email'];
+var b_country = data[i]['b_country'];
+var b_city = data[i]['b_city'];
+var b_postcode = data[i]['b_postcode'];
+var b_account_number = data[i]['b_account_number'];
+var bank_name = data[i]['bank_name'];
+var b_state = data[i]['b_state'];
+var b_identification_type = data[i]['b_identification_type'];
+var b_identification_value = data[i]['b_identification_value'];
+var b_bic_swift = data[i]['b_bic_swift'];
+var b_ach_code = data[i]['b_ach_code'];
+var b_beneficiary_country = data[i]['b_beneficiary_country'];
+var b_beneficiary_entity_type = data[i]['b_beneficiary_entity_type'];
+
+
+if(department == 'Father'){
+var st_css= 'eng_css';
+}
+
+if(department == 'Mother'){
+var st_css= 'op_css';
+}
+
+if(department == 'Brother'){
+var st_css= 'des_css';
+}
+if(department == 'Sister'){
+var st_css= 'sup_css';
+}
+
+if(department == 'Relations'){
+var st_css= 'r_css';
+}
+if(department == 'Friends'){
+var st_css= 'sup_css';
+}
+
+var rec = "<div class='rows' style='width:100%;'><div  class='col-sm-12 task_css notify-fade_" + id +"'  style='width:100%;' id='contents_data' >" +      
+"<span class='col-sm-1'><img title='Owner' alt='Image' class='img-circle' style='border-style: solid; border-width:3px; border-color:#3b5998; width:40px;height:40px; max-width:40px;max-height:40px;' src='" + url_xcc1 +"uploads_image/" + photo +"' /></span>" +
+"<span class='col-sm-2' >"+fullname+"</span>" +
+"<span class='col-sm-3' >"+wallet_id+"</span>" +
+"<span class='col-sm-1 "+st_css+" ' >"+department+"</span>" +
+//"<span class='col-sm-1' >"+salary+" USD</span>" +
+"<span class='col-sm-1'><span class='fa fa-calendar'></span> <span data-livestamp='" + timing + "'></span></span>"+
+"<a href='pay.html?id=" + id +"&token=" + token +"&fullname=" + fullname +"' class='btn btn-primary col-sm-2' title='Send Payments'><span style='font-size:20px;color:black;' class='fa fa-money'></span>Send Payments</a><br>"+
+
+
+
+
+"<li style='list-style: none;'><span style='color:white;' class='dropdown'></span>"+
+"<a style='color:white;font-size:14px;cursor:pointer;' title='Actions' class='dropdown-toggle action_css btn_action_task pull-right'  data-toggle='dropdown'  data-id=\""+ id +"\" data-email=\""+ email +"\"  data-photo=\""+photo +"\" data-phone_no=\""+ phone_no +"\"  data-fullname=\""+ fullname +"\" data-department=\""+ department +"\"  data-timing=\""+ timing +"\" data-salary=\""+ salary +"\" data-wallet=\""+ wallet_id +"\"  data-b_name=\""+ b_name +"\" data-b_address=\""+ b_address +"\" data-b_email=\""+ b_email +"\" data-b_country=\""+ b_country +"\" data-b_city=\""+ b_city +"\" data-b_postcode=\""+ b_postcode +"\" data-b_account_number=\""+ b_account_number +"\"   data-bank_name=\""+ bank_name +"\" data-b_state=\""+ b_state +"\" data-b_identification_type=\""+ b_identification_type +"\" data-b_identification_value=\""+ b_identification_value +"\"   data-b_bic_swift=\""+ b_bic_swift +"\" data-b_ach_code=\""+ b_ach_code +"\" data-b_beneficiary_country=\""+  b_beneficiary_country +"\" data-b_beneficiary_entity_type=\""+ b_beneficiary_entity_type +"\"> <span style='font-size:20px;color:black;' class='fa fa-plus-square'></span>  Action</a>"+
+"<ul class='dropdown-menu pull-right' style='width:120px;height: 170px;overflow-y : scroll;'>"+
+
+//"<img title='Owner' alt='Image'  src='uploads_image/" + photo +"' class='img-circle' style='border-style: solid; border-width:3px; border-color:#3b5998; width:40px;height:40px; max-width:40px;max-height:40px;'><br>";
+"<span class='' ><b>Name:</b> "+fullname+"</span><br><br>" +
+"<div><button data-toggle='modal' data-target='#myModal_action_task'  title='View Content'  data-id=\""+ id +"\" data-email=\""+ email +"\"  data-photo=\""+photo +"\" data-phone_no=\""+ phone_no +"\"  data-fullname=\""+ fullname +"\" data-department=\""+ department +"\"  data-timing=\""+ timing +"\"  data-salary=\""+ salary +"\" data-wallet=\""+ wallet_id +"\" data-b_name=\""+ b_name +"\" data-b_address=\""+ b_address +"\" data-b_email=\""+ b_email +"\" data-b_country=\""+ b_country +"\" data-b_city=\""+ b_city +"\" data-b_postcode=\""+ b_postcode +"\" data-b_account_number=\""+ b_account_number +"\"   data-bank_name=\""+ bank_name +"\" data-b_state=\""+ b_state +"\" data-b_identification_type=\""+ b_identification_type +"\" data-b_identification_value=\""+ b_identification_value +"\"   data-b_bic_swift=\""+ b_bic_swift +"\" data-b_ach_code=\""+ b_ach_code +"\" data- b_beneficiary_country=\""+  b_beneficiary_country +"\" data-b_beneficiary_entity_type=\""+ b_beneficiary_entity_type +"\" class='btn_action_taskpull-right edit_css btn btn-success  col-sm-12'><span style='font-size:20px;color:black;' class='fa fa-edit'></span> view Content</button></div><br>" +
+
+
+"<div class='loader-notify-delete-post_" + id +"'></div>"+
+"<div class='result-notify-delete-post_" + id +"'></div>"+
+
+
+"<div><button class='btn btn-danger col-sm-12 del_btn' id='' data-id=\""+ id +"\"  title='Delete Content'><span style='font-size:20px;color:black;' class='fa fa-trash'></span> Delete Content</button></div><br>"+
+
+"<a href='pay.html?id=" + id +"&token=" + token +"&fullname=" + fullname +"' class='btn btn-primary col-sm-12' title='Send Payments'><span style='font-size:20px;color:black;' class='fa fa-money'></span>Send Payments</a><br>";
+"<br></ul>&nbsp;&nbsp;</li>"+
+
+
+
+"</div><br></div><br>";
+
+
+
+
+
+ $("#res_Task").append(rec);
+
+
+$("#loader_posts").hide();
+
+                }
+            }
+        }
+
+
+
+// loading Products ends here
+
+
+
+
+
+
+
+// Task updates Calls Starts
+
+$(document).ready(function(){
+//$('.btn_action_task').click(function(){
+$(document).on( 'click', '.btn_action_task', function(){ 
+
+
+
+var salary = $(this).data('salary');
+var wallet = $(this).data('wallet');
+
+
+var id = $(this).data('id');
+var photo = $(this).data('photo');
+var fullname = $(this).data('fullname');
+var userid = id;
+var email = $(this).data('email');
+var phone_no = $(this).data('phone_no');
+var department = $(this).data('department');
+var timing = $(this).data('timing');
+//alert(timing);
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+var image1 = "<img title='Owner' alt='Image' class='img-circle' style='border-style: solid; border-width:3px; border-color:#3b5998; width:40px;height:40px; max-width:40px;max-height:40px;' src='"+url_xcc1+"uploads_image/ " + photo +"' /></span>";
+var image2 = "<img title='Owner' alt='Image' class='img-circle' style='border-style: solid; border-width:3px; border-color:#3b5998; width:240px;height:240px; max-width:240px;max-height:240px;' src='"+url_xcc1+"uploads_image/" + photo +"' /></span>";
+
+var timing_call = "<span data-livestamp='" + timing + "'></span>";
+
+$('.id_call').html(id);
+$('.fullname_call').html(fullname);
+$('.userid_call').html(userid);
+$('.email_call').html(email);
+$('.phone_no_call').html(phone_no);
+$('.department_call').html(department);
+$('.timing_call').html(timing);
+$('.image1_call').html(image1);
+$('.image2_call').html(image2);
+
+$('.salary_call').html(salary);
+$('.wallet_call').html(wallet);
+
+
+$('.id_call2').val(id).value;
+$('.fullname_call2').val(fullname).value;
+
+/*
+$('.id_call2').val(id).value;
+$('.fullname_call2').val(fullname).value;
+*/
+
+
+
+var b_name = $(this).data('b_name');
+var b_address = $(this).data('b_address');
+var b_email = $(this).data('b_email');
+var b_country = $(this).data('b_country');
+var b_city = $(this).data('b_city');
+var b_postcode = $(this).data('b_postcode');
+var b_account_number = $(this).data('b_account_number');
+var bank_name = $(this).data('bank_name');
+var b_state = $(this).data('b_state');
+var b_identification_type = $(this).data('b_identification_type');
+var b_identification_value = $(this).data('b_identification_value');
+var b_bic_swift = $(this).data('b_bic_swift');
+var b_ach_code = $(this).data('b_ach_code');
+var b_beneficiary_country = $(this).data('b_beneficiary_country');
+var b_beneficiary_entity_type = $(this).data('b_beneficiary_entity_type');
+
+
+$('.b_name_call').html(b_name);
+$('.b_address_call').html(b_address);
+$('.b_email_call').html(b_email);
+$('.b_country_call').html(b_country);
+$('.b_city_call').html(b_city);
+$('.b_postcode_call').html(b_postcode);
+$('.b_account_number_call').html(b_account_number);
+$('.bank_name_call').html(bank_name);
+$('.b_state_call').html(b_state);
+$('.b_identification_type_call').html(b_identification_type);
+$('.b_identification_value_call').html(b_identification_value);
+$('.b_bic_swift_call').html(b_bic_swift);
+$('.b_ach_code_call').html(b_ach_code);
+$('.b_beneficiary_country_call').html(b_beneficiary_country);
+$('.b_beneficiary_entity_type_call').html(b_beneficiary_entity_type);
+		
+	})
+
+
+});
+//Task Update Calls Ends
+
+
+
+
+// refresh page on click
+
+$(document).ready(function(){
+//$('.reloadPageTask').click(function(){
+$(document).on( 'click', '.reloadPageTask', function(){ 
+//window.reload();
+//window.location='dashboard.html';
+window.location.href = window.location.href;
+	})
+
+});
+
+
+
+
+
+
+// delete content starts here
+
+
+$(document).ready(function(){
+
+//$('.del_btn').click(function(){
+$(document).on( 'click', '.del_btn', function(){ 
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+
+// confirm start
+ if(confirm("Are you sure you want to Delete This Contents: ")){
+var id = $(this).data('id');
+$(".loader-notify-delete-post_"+id).fadeIn(400).html('<br><div style="color:black;background:#ddd;padding:10px;"><img src="ajax-loader.gif">&nbsp;Please Wait, Data being deleted...</div>');
+var datasend = {'id': id};
+		$.ajax({
+			
+			type:'POST',
+			url: url_xcc1+'recipient_delete.php',
+			data:datasend,
+                        crossDomain: true,
+			cache:false,
+			success:function(msg){
+
+
+	if(msg == 1){
+alert('Contents Successfully Deleted');
+$(".notify-fade_"+id).delay(1000).fadeOut('fast');
+/*
+$(".loader-notify-delete-post_"+id).hide();
+$(".result-notify-delete-post_"+id).html("<div style='color:white;background:green;padding:10px;'>Contents Successfully Deleted</div>");
+setTimeout(function(){ $(".result-notify-delete-post_"+id).html(''); }, 5000);
+location.reload();
+*/
+}
+
+
+	if(msg == 0){
+
+alert('Contents could not be deleted. Please ensure you are connected to Internet.');
+$(".loader-notify-delete-post_"+id).hide();
+$(".result-notify-delete-post_"+id).html("<div style='color:white;background:red;padding:10px;'>Contents could not be deleted. Please ensure you are connected to Internet.</div>");
+setTimeout(function(){ $(".result-notify-delete-post_"+id).html(''); }, 5000);
+
+}
+
+}
+			
+});
+}
+
+// confirm ends
+
+                });
+
+
+            });
+
+
+// Delete contents ends here
+</script>
+
+
+
+
+
+
+
+<!-- start loading data --->
+
+<div id="content">
+
+ 
+   <br>
+
+
+
+
+
+<table width="100%" id="task_label" border="0">
+        <tr class="tr_header">
+            <th class='col-sm-1'>Photo</th>
+            <th class='col-sm-2'>Fullname</th>
+            <th class='col-sm-3'>E-Wallets</th>
+         
+
+<th class='col-sm-1'>Relationship</th>
+
+
+            <th class='col-sm-1'>Created Time</th>
+<th class='col-sm-2'>Payments</th>
+            <th class='col-sm-2'>Priority/Action</th>
+
+        </tr>
+    </table>
+  
+        <div id="res_Task"  style='width:100%'></div>
+<div id="nomore_content_check"></div>
+<div id="loader_check"></div>
+<div id="result_check"></div>
+
+        <div id="">
+            <input type="hidden" id="form_queryid" value="0" />
+            <input type="hidden" id="form_querytotal" value="0" />
+<br>
+
+<hr style='width:100%;'>
+<br>
+<div id="network_error"></div>
+<div id="pcheck"></div>
+
+<div style='width:100%;' id="loader_posts"></div><br>
+<input type="button" style='width:100%' title='LoadMore Persons' class="button action_css" value="LoadMore Persons" id="loadmore_btn" />
+ 
+        </div>
+    </div>
+
+
+<!-- end loading data  --->
+
+
+
+
+
+
+
+
+
+
+<!-- Main Post ends -->
+
+
+<!-- Main Post Database query ends here-->
+
+
+
+
+
+</div>
+<!--all post section ends-->
+
+
+
+
+
+
+
+<!-- footer Section start -->
+
+<footer class=" navbar_footer text-center footer_bgcolor">
+
+<div class="row">
+        <div class="col-sm-12">
+<p class="footer_text1"><span class='myd_title_header'></span></p>
+<p class="footer_text2"><span class='myd_title_footer'></span></p>
+<br>
+
+        </div>
+
+
+
+        </div>
+
+<br/>
+  <p></p>
+</footer>
+
+<!-- footer Section ends -->
+	
+
+
+
+
+<div>
+  <!--end right column all-->    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.title_css{
+//background: green;
+color:green;
+cursor:pointer;
+font-size:24px;
+
+}
+
+
+.title_css:hover{
+//background: purple;
+color:purple;
+
+}
+
+
+
+.seeking_css{
+background: purple;
+color:white;
+padding:6px;
+cursor:pointer;
+border:none;
+border-radius:10%;
+font-size:16px;
+}
+
+.seeking_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.offering_css{
+background: green;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.offering_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+.cat_css{
+background: #ec5574;
+color:white;
+padding:10px;
+cursor:pointer;
+border:none;
+border-radius:25%;
+font-size:16px;
+}
+
+.cat_css:hover{
+background: black;
+color:white;
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+// clear Modal div content on modal closef closed
+$(document).ready(function(){
+$('#myModal_emp').on('hidden.bs.modal', function() {
+//alert('Modal Closed');
+   $('.myform_issue').empty();  
+ console.log("modal closed and content cleared");
+ });
+});
+
+</script>
+
+
+        <script>
+
+function imagePreview(e) 
+{
+ var readImage = new FileReader();
+ readImage.onload = function()
+ {
+  var displayImage = document.getElementById('imageupload_preview');
+  displayImage.src = readImage.result;
+ }
+ readImage.readAsDataURL(e.target.files[0]);
+}
+
+
+            $(function () {
+                $('#save_btn').click(function () {
+
+var url_xcc1= localStorage.getItem('p_urlfa');
+// initialize Employees Personal details Variables
+
+                    var email = $('#email').val();
+                    var phone_no = $('#phone_no').val();
+                    var first_name = $('#first_name').val();
+                    var last_name = $('#last_name').val();
+                    var file_fname = $('#file_content').val();
+                    var department = $('#department').val();
+                    var emailaddress_pot = $('#emailaddress_pot').val();
+                    var salary1 = '00';
+                    var ux_wallets= $('#ux_wallets').val();
+
+                    //preparing Email for validations
+                    var atemail = email.indexOf("@");
+                    var dotemail = email.lastIndexOf(".");
+var creator_id = localStorage.getItem('useridsessdatafa');
+
+
+
+// initialize Banking Variable for Employees Payouts
+var b_name = $('#b_name').val();
+var b_address = $('#b_address').val();
+var b_email = $('#b_email').val();
+var b_country = $('#b_country').val();
+var b_city = $('#b_city').val();
+var b_postcode = $('#b_postcode').val();
+var b_account_number = $('#b_account_number').val();
+var bank_name = $('#bank_name').val();
+var b_state = $('#b_state').val();
+var b_identification_type = $('#b_identification_type').val();
+var b_identification_value = $('#b_identification_value').val();
+var b_bic_swift = $('#b_bic_swift').val();
+var b_ach_code = $('#b_ach_code').val();
+var b_beneficiary_country = $('#b_beneficiary_country').val();
+var b_beneficiary_entity_type = $('#b_beneficiary_entity_type').val();
+
+
+
+
+// start if validate
+if(file_fname==""){
+alert('please Select File to Upload');
+}
+
+else if(email==""){
+alert('please Enter Recipient Email Address');
+}
+
+else  if (atemail < 1 || ( dotemail - atemail < 2 )){
+alert("Please enter valid Recipient email Address")
+}
+
+else if(ux_wallets==""){
+alert('Recipents Rapyd Wallets Id cannot be Empty');
+}
+
+else if(phone_no==""){
+alert('please Enter Phone No.');
+}
+
+else if(first_name==""){
+alert('please Enter Your Firstname');
+}
+
+else if(last_name==""){
+alert('please Enter Your Lastname');
+}
+else if(department==""){
+alert('please Select Departments');
+}
+/*
+else if(salary1==""){
+alert('Monthly Salary Cannot be empty');
+}
+
+else if(isNaN(salary1)){
+  alert("Salary must be a number");
+}
+
+
+else if(salary1 > 1000){
+alert('For Testing Purpose, Amount should not be more than 1,000(USD). Please enter lesser amount');
+}
+*/
+
+else if(b_name==""){
+alert('Employees name at Bank Cannot be Empty');
+}
+else if(b_address==""){
+alert('Employees Address for Bank Cannot be Empty');
+}
+else if(b_email==""){
+alert('Employees Email for Bank Cannot be Empty');
+}
+else if(b_country==""){
+alert('Employees Country for Bank Cannot be Empty');
+}
+else if(b_city==""){
+alert('Employees City For Bank Cannot be Empty');
+}
+else if(b_postcode==""){
+alert('Employees Postcode for Bank Cannot be Empty');
+}
+else if(b_account_number==""){
+alert('Employees Bank Account Number Cannot be Empty');
+}
+else if(bank_name==""){
+alert('Your Bank Name Cannot be Empty');
+}
+else if(b_state==""){
+alert('Employees State for Bank Cannot be Empty');
+}
+else if(b_identification_type==""){
+alert('Employees Identification type Cannot be Empty');
+}
+else if(b_identification_value==""){
+alert('Employees Identification Value  Cannot be Empty');
+}
+else if(b_bic_swift==""){
+alert('Employees Bic Swift Cannot be Empty');
+}
+else if(b_ach_code==""){
+alert('Employees Ach code Cannot be Empty');
+}
+else if(b_beneficiary_country==""){
+alert('Employees beneficiary_country  Cannot be Empty');
+}
+else if(b_beneficiary_entity_type==""){
+alert('Employees beneficiary_entity_type Cannot be Empty');
+}
+
+
+
+
+else{
+
+var fname=  $('#file_content').val();
+var ext = fname.split('.').pop();
+//alert(ext);
+
+// add double quotes around the variables
+var fileExtention_quotes = ext;
+fileExtention_quotes = "'"+fileExtention_quotes+"'";
+
+ var allowedtypes = ["PNG", "png", "gif", "GIF", "jpeg", "JPEG", "BMP", "bmp","JPG","jpg"];
+    if(allowedtypes.indexOf(ext) !== -1){
+//alert('Good this is a valid Image');
+}else{
+alert("Please Upload a Valid image. Only Images Files are allowed");
+return false;
+    }
+
+          var form_data = new FormData();
+          form_data.append('file_content', $('#file_content')[0].files[0]);
+          form_data.append('file_fname', file_fname);
+          form_data.append('email', email);
+          form_data.append('last_name', last_name);
+          form_data.append('first_name', first_name);
+          form_data.append('emailaddress_pot', emailaddress_pot);
+          form_data.append('phone_no', phone_no);
+          form_data.append('department', department);
+          form_data.append('salary1', salary1);
+          form_data.append('creator_id', creator_id);
+ form_data.append('ux_wallets', ux_wallets);
+
+
+
+form_data.append('b_name', b_name);
+form_data.append('b_address', b_address);
+form_data.append('b_email', b_email);
+form_data.append('b_country', b_country);
+form_data.append('b_city', b_city);
+form_data.append('b_postcode', b_postcode);
+form_data.append('b_account_number', b_account_number);
+form_data.append('bank_name', bank_name);
+form_data.append('b_state', b_state);
+form_data.append('b_identification_type', b_identification_type);
+form_data.append('b_identification_value', b_identification_value);
+form_data.append('b_bic_swift', b_bic_swift);
+form_data.append('b_ach_code', b_ach_code);
+form_data.append('b_beneficiary_country', b_beneficiary_country);
+form_data.append('b_beneficiary_entity_type', b_beneficiary_entity_type);
+
+
+
+
+                    $('.upload_progress').css('width', '0');
+                    $('#btn').attr('disabled', 'disabled');
+                    $('#loader_pp').fadeIn(400).html('<br><span class="well" style="color:black"><img src="ajax-loader.gif">&nbsp;Please Wait, Your Data is being Submitted</span>');
+
+                        $.ajax({
+                        url: url_xcc1+'recipient_action.php',
+                        data: form_data,
+                        processData: false,
+                        contentType: false,
+                        ache: false,
+                        type: 'POST',
+                        xhr: function () {
+                      //var xhr = new window.XMLHttpRequest();
+                            var xhr = $.ajaxSettings.xhr();
+                            xhr.upload.addEventListener("progress", function (event) {
+                                var upload_percent = 0;
+                                var upload_position = event.loaded;
+                                var upload_total  = event.total;
+
+                                if (event.lengthComputable) {
+                                    var upload_percent = upload_position / upload_total;
+                                    upload_percent = parseInt(upload_percent * 100);
+                                  //upload_percent = Math.ceil(upload_position / upload_total * 100);
+                                    $('.upload_progress').css('width', upload_percent + '%');
+                                    $('.upload_progress').text(upload_percent + '%');
+                                }
+                            }, false);
+                            return xhr;
+                        },
+                        success: function (msg) {
+                                //$('#box').val('');
+				$('#loader_pp').hide();
+				$('.result_data').fadeIn('slow').prepend(msg);
+                                $('.result_data_new').fadeIn('slow').prepend(msg);
+				$('#alertdata_uploadfiles').delay(5000).fadeOut('slow');
+                                $('#alerts_reg').delay(5000).fadeOut('slow');
+                                $('#alertdata_uploadfiles2').delay(20000).fadeOut('slow');
+                                $('#save_btn').removeAttr('disabled');
+
+
+//strip all html elemnts using jquery
+var html_stripped = jQuery(msg).text();
+//alert(html_stripped);
+
+//check occurrence of word (Successfully) from backend output already html stripped.
+var Frombackend = html_stripped;
+var bcount = (Frombackend.match(/Successfully/g) || []).length;
+//alert(bcount);
+
+if(bcount > 0){
+$('#file_fname').val('');
+$('#email').val('');
+$('#first_name').val('');
+$('#last_name').val('');
+$('#phone_no').val('');
+$('#department').val('');
+}
+
+
+
+
+                        }
+                    });
+} // end if validate
+                });
+            });
+
+
+        </script>
+
+
+<style>
+.upload_progress{
+padding:10px;
+background:green;
+color:white;
+cursor:pointer;
+min-width:30px;
+}
+
+#imageupload_preview
+{
+max-height:200px;
+max-width:200px;
+}
+
+// make modal full screen
+/*
+.full-screen {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+*/
+
+.modal-dialog {
+  width: 98%;
+  height: 92%;
+  padding: 0;
+}
+
+.modal-content {
+  height: 99%;
+}
+
+</style>
+
+
+
+ <!-- Modal one Starts -->
+
+<div class="container">
+ 
+  <div class="modal fade" id="myModal_emp" role="dialog">
+   <div class="full-screen modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style='color:black; background:#ddd'>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Families and Friends Creation Management System</h4>
+        </div>
+        <div class="modal-body">
+ <!-- Modal content starts-->
+
+
+
+
+
+<!--start form-->
+<div class='col-sm-12 ' style='background:#ddd;'>
+
+<form id="" method="post" class='result_hide'>
+
+
+
+<center><div style='font-size:18px;color:purple;'>Stage 1.) Recipients Personal Details</div></center>
+
+<div class="form-group">
+<label style="">Select Profile Photo: </label>
+<input style="background:#c1c1c1;" class="col-sm-12 form-control" type="file" id="file_content" name="file_content" accept="image/*" onchange="imagePreview(event)" />
+ <img id="imageupload_preview"/>
+</div><br>
+
+ <div class="form-group">
+              <label style="" for="email">
+<span class="fa fa-envelope-o"></span>Recipient Registered Email on our App</label> &nbsp;&nbsp;&nbsp;&nbsp;<sapan style='color:red'>Ask the Recipient to give you the Email Address He/She used to Signup in our App. In Real life, This Must be Email Address the Recipient used to to Signup within the 
+application and we have to verify if it exist in our database.
+The Email Address will enable the Recipient to track Payments Transactions recieved to and from his/her own end as Unique Identity.<br> <b style='color:blue;'>(For testing purpose, Just Enter any Email address and continue)</b>  </span>
+              <input type="text" class="col-sm-12 form-control" id="email" name="email" placeholder="Enter Email Address">
+<div class="result1" id="email_check"></div>
+            </div><br>
+
+ 
+
+ <div class="form-group">
+              <label style="" for="wallets">
+<span class="fa fa-globe"></span> Recipient Created Rapyd Wallets Id</label> &nbsp;&nbsp;&nbsp;&nbsp;<sapan style='color:red'>
+Ask the Recipient to give you any of the Wallets Id He/She created within our App from his own end. In Real life, We will need to verify if the Wallets Id exist in our database.
+The Wallets Id will enable the Recipient to track Payments Transactions recieved to and from his/her own end as Unique Identity.
+
+ <br><b>(For testing purpose, if no created Wallets Id is available from the Recipient , just type <b style='font-size:20px;color:blue;'>none</b> in the form input below and the System will generate wallet
+ Id for the Recipient by Sending data to <b style='font-size:14px;color:blue;'>Rapyd Wallets Creation API.</b></b>  </span>
+              <input type="text" class="col-sm-12 form-control" id="ux_wallets" name="ux_wallets" placeholder="Enter Recipients Wallets Id">
+
+            </div><br>
+
+
+
+ <div class="form-group">
+              <label style="" for="phone"></label>
+<span class="fa fa-phone"></span>Contact No.(The Phone must start with your Coutry Codes eg +123.......)
+              <input type="text" class="col-sm-12 form-control" id="phone_no" name="phone_no" placeholder="Enter Contact No.">
+
+            </div><br>
+
+<style>
+.secured_pot{ display:none; } /* hide because is spam protection */
+</style>
+<input class="secured_pot" type="text" name="emailaddress_pot" id="emailaddress_pot" />
+
+
+
+
+<div class="form-group">
+              <label style="" for="last_name">
+<span class="fa fa-male"></span>LastName</label>
+              <input type="text" class="col-sm-6 form-control" id="last_name" name="last_name" placeholder="Enter Last Name">
+            </div>
+
+
+
+<div class="form-group">
+              <label style="" for="first_name">
+<span class="fa fa-male"></span>FirstName</label>
+              <input type="text" class="col-sm-6 form-control" id="first_name" name="first_name" placeholder="Enter First Name">
+            </div>
+
+
+
+
+<div class="form-group">
+              <label style="" for="departments">
+<span class="fa fa-globe"></span> Family Positions</label>
+<select  class="form-control contact_input_color" id="department" name="department" placeholder="Family Positions" required>
+<option value=''>---Select Position--</option>
+<option value='Father'>Father</option>
+<option value='Mother'>Mother</option>
+<option value='Brother'>Brother</option>
+<option value='Sister'>Sister</option>
+<option value='Relations'>Relations</option>
+<option value='Friends'>Friends</option>
+</select>
+
+</div>
+
+
+
+<center><div style='font-size:18px;color:purple;'>Stage 2.) Recipients/Beneficiary Banks Details for Salary Payouts</div></center>
+<h2 style='color:red'>Warning: </h2> <span style='color:red'>(Do not Edit Banks Details below unless you know what you are doing. For More Informations,
+See Payouts to Bank API Call )</span>
+
+
+<div style='display:none;' class="form-group">
+              <label>Name</label>
+              <input type="text" class="col-sm-12 form-control" id="b_name" name="b_name" value="Jane Doe">
+            </div>
+<div class="form-group">
+              <label>Address</label>
+              <input type="text" class="col-sm-12 form-control" id="b_address" name="b_address" value="456 Second Street">
+            </div>
+<div class="form-group">
+              <label>Email</label>
+              <input type="text" class="col-sm-12 form-control" id="b_email" name="b_email" value="janedoe@rapyd.net">
+            </div>
+<div class="form-group">
+              <label>Country</label>
+              <input type="text" class="col-sm-12 form-control" id="b_country" name="b_country" value="US">
+            </div>
+<div class="form-group">
+              <label>City</label>
+              <input type="text" class="col-sm-12 form-control" id="b_city" name="b_city" value="US">
+            </div>
+<div class="form-group">
+              <label>PostCode</label>
+              <input type="text" class="col-sm-12 form-control" id="b_postcode" name="b_postcode" value="10101">
+            </div>
+<div class="form-group">
+              <label>Account Number</label>
+              <input type="text" class="col-sm-12 form-control" id="b_account_number" name="b_account_number" value="BG96611020345678">
+            </div>
+<div class="form-group">
+              <label>Bank Name</label>
+              <input type="text" class="col-sm-12 form-control" id="bank_name" name="bank_name" value="US General Bank">
+            </div>
+
+<div class="form-group">
+              <label>State</label>
+              <input type="text" class="col-sm-12 form-control" id="b_state" name="b_state" value="NY">
+            </div>
+
+<div class="form-group">
+              <label>Identification Type</label>
+              <input type="text" class="col-sm-12 form-control" id="b_identification_type" name="b_identification_type" value="SSC">
+            </div>
+
+
+
+<div class="form-group">
+              <label>Identification Value</label>
+              <input type="text" class="col-sm-12 form-control" id="b_identification_value" name="b_identification_value" value="123456789">
+            </div>
+
+
+<div class="form-group">
+              <label>Bic Swift</label>
+              <input type="text" class="col-sm-12 form-control" id="b_bic_swift" name="b_bic_swift" value="BUINBGSF">
+            </div>
+
+<div class="form-group">
+              <label>Ach Code</label>
+              <input type="text" class="col-sm-12 form-control" id="b_ach_code" name="b_ach_code" value="123456789">
+            </div>
+
+<div class="form-group">
+              <label>Beneficiary Country</label>
+              <input type="text" class="col-sm-12 form-control" id="b_beneficiary_country" name="b_beneficiary_country" value="US">
+            </div>
+
+<div class="form-group">
+              <label>beneficiary_entity_type</label>
+              <input type="text" class="col-sm-12 form-control" id="b_beneficiary_entity_type" name="b_beneficiary_entity_type" value="individual">
+            </div>
+
+
+
+
+                    <div class="form-group">
+                            <div class="upload_progress" style="width:0%">0%</div>
+
+                        <div id="loader_pp"></div>
+                        <div class="result_data"></div>
+                    </div>
+
+                    <input type="button" id="save_btn" class="pull-right seeking_css save_btn" value="Add Families" />
+                </form>
+
+
+</div>
+<!--end form-->
+
+ <!-- Modal content ends-->
+          
+        </div>
+        <div class="modal-footer" style='color:black; background:#ddd'>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+ <!-- Modal one ends-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Modal two Starts -->
+
+<div class="container">
+ 
+  <div class="modal fade" id="myModal_action_task" role="dialog">
+   <div class="full-screen modal-dialog modal-lg modal-appear-center1 modal_mobile_resize modaling_sizing">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style='color:black; background:#ddd'>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Employees Profiles/Updates System</h4>
+        </div>
+        <div class="modal-body">
+ <!-- Modal content starts-->
+
+<div class='rows'>
+
+<div class='col-sm-6'>
+
+<h3 style='color:purple'>Recipients Personal Info</h3>
+<span class='image2_call'></span><br /><br />
+<b>Name: </b> <span class="fullname_call"></span><br />
+<b>Email: </b> <span class="email_call"></span><br />
+<b>Phone No: </b> <span class="phone_no_call"></span><br />
+<b>Family Relationship: </b> <span class="department_call"></span><br />
+<b>Time Created: </b> <span class="timing_call"></span><br />
+
+</div>
+
+
+<div class='col-sm-6'>
+<h3 style='color:#800000'>Recipients Rapyd Banking Info</h3>
+<b>Wallet_ID </b> <span class="wallet_call"></span><br />
+<b>Name </b> <span class="b_name_call"></span><br />
+
+<b>Address: </b> <span class="b_address_call"></span><br />
+<b>Email: </b> <span class="b_email_call"></span><br />
+<b>Country: </b> <span class="b_country_call"></span><br />
+<b>City: </b> <span class="b_city_call"></span><br />
+<b>PostCode: </b> <span class="b_postcode_call"></span><br />
+<b>Account No: </b> <span class="b_account_number_call"></span><br />
+<b>Bank Name: </b> <span class="bank_name_call"></span><br />
+<b>State: </b> <span class="b_state_call"></span><br />
+<b>Identification Type: </b> <span class="b_identification_type_call"></span><br />
+<b>Identification value: </b> <span class="b_identification_value_call"></span><br />
+<b>Bic Swift: </b> <span class="b_bic_swift_call"></span><br />
+<b>Ach Code: </b> <span class="b_ach_code_call"></span><br />
+<b>Beneficiary Country: </b> <span class="b_beneficiary_country_call"></span><br />
+<b>Beneficiary Entity Type: </b> <span class="b_beneficiary_entity_type_call"></span><br />
+</div>
+
+
+
+</div>
+
+
+
+<input type="hidden" id="" class='id_call2' name="id_call2" value="" >
+<input type="hidden" id="" class='fullname_call2' name="fullname_call2" value="" >
+ <!-- Modal content ends-->
+          
+        </div>
+        <div class="modal-footer" style='color:black; background:#ddd'>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+ <!-- Modal two ends-->
+
+
+
+
+
+</section>
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
